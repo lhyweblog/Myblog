@@ -96,24 +96,28 @@
 
 
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="什么是Ajax？Ajax 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。 Ajax的全称是Asynchronous JavaScript and XML，即异步JavaScript+XML。它并不是新的编程语言，而是几种原有技术的结合体。通俗的讲呢，我个人的理解是，Ajax就是一种获取和发送数据，客户端与服务器端交互的手段，主要用于前后台的数据交互，数据获取，界面数据异步更新等它由">
+<meta name="keywords" content="Ajax">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/02/08/hello-world/index.html">
+<meta property="og:title" content="Ajax详解(1)--初识Ajax">
+<meta property="og:url" content="http://yoursite.com/2019/02/21/Ajax详解-1-初识Ajax/index.html">
 <meta property="og:site_name" content="拼搏岁月">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="什么是Ajax？Ajax 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。 Ajax的全称是Asynchronous JavaScript and XML，即异步JavaScript+XML。它并不是新的编程语言，而是几种原有技术的结合体。通俗的讲呢，我个人的理解是，Ajax就是一种获取和发送数据，客户端与服务器端交互的手段，主要用于前后台的数据交互，数据获取，界面数据异步更新等它由">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-08T06:42:18.674Z">
+<meta property="og:image" content="http://yoursite.com/Myblog/2019/02/21/Ajax详解-1-初识Ajax/p1.png">
+<meta property="og:image" content="http://yoursite.com/Myblog/2019/02/21/Ajax详解-1-初识Ajax/p2.png">
+<meta property="og:updated_time" content="2019-02-21T13:34:07.004Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Ajax详解(1)--初识Ajax">
+<meta name="twitter:description" content="什么是Ajax？Ajax 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。 Ajax的全称是Asynchronous JavaScript and XML，即异步JavaScript+XML。它并不是新的编程语言，而是几种原有技术的结合体。通俗的讲呢，我个人的理解是，Ajax就是一种获取和发送数据，客户端与服务器端交互的手段，主要用于前后台的数据交互，数据获取，界面数据异步更新等它由">
+<meta name="twitter:image" content="http://yoursite.com/Myblog/2019/02/21/Ajax详解-1-初识Ajax/p1.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/08/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/21/Ajax详解-1-初识Ajax/">
 
 
 
@@ -123,7 +127,7 @@
   };
 </script>
 
-  <title>Hello World | 拼搏岁月</title>
+  <title>Ajax详解(1)--初识Ajax | 拼搏岁月</title>
   
 
 
@@ -373,7 +377,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/02/08/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/02/21/Ajax详解-1-初识Ajax/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="连贺扬">
@@ -390,7 +394,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World
+          <h1 class="post-title" itemprop="name headline">Ajax详解(1)--初识Ajax
 
               
             
@@ -416,9 +420,13 @@
                 
               
 
-              <time title="创建时间：2019-02-08 14:42:18" itemprop="dateCreated datePublished" datetime="2019-02-08T14:42:18+08:00">2019-02-08</time>
+              <time title="创建时间：2019-02-21 18:53:05 / 修改时间：21:34:07" itemprop="dateCreated datePublished" datetime="2019-02-21T18:53:05+08:00">2019-02-21</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -434,7 +442,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/人工智能/" itemprop="url" rel="index"><span itemprop="name">人工智能</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/javaWeb/" itemprop="url" rel="index"><span itemprop="name">javaWeb</span></a></span>
 
                 
                 
@@ -469,16 +477,12 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        <h1 id="什么是Ajax？"><a href="#什么是Ajax？" class="headerlink" title="什么是Ajax？"></a>什么是Ajax？</h1><p>Ajax 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。</p>
+<p>Ajax的全称是Asynchronous JavaScript and XML，即异步JavaScript+XML。它并不是新的编程语言，而是几种原有技术的结合体。<br>通俗的讲呢，我个人的理解是，Ajax就是一种获取和发送数据，客户端与服务器端交互的手段，主要用于前后台的数据交互，数据获取，界面<br>数据异步更新等它由以下几种技术组合而成，包括：</p>
+<p>HTML/XHTML——主要的内容表示语言。<br>CSS——为XHTML提供文本格式定义。<br>DOM——对已载入的页面进行动态更新。<br>XML/json——数据交换格式。<br>XSLT——将XML转换为XHTML（用CSS修饰样式）。<br>XMLHttp——用XMLHttpRequest来和服务器进行异步通信，是主要的通信代理。<br>JavaScript——用来编写Ajax引擎的脚本语言。<br>实际上，在Ajax解决方案中这些技术都是可用的，不过只有三种是必须的：HTML/XHTML、DOM以及JavaScript。</p>
+<h1 id="Ajax原理"><a href="#Ajax原理" class="headerlink" title="Ajax原理"></a>Ajax原理</h1><h2 id="Ajax工作流程"><a href="#Ajax工作流程" class="headerlink" title="Ajax工作流程"></a>Ajax工作流程</h2><img src="/Myblog/2019/02/21/Ajax详解-1-初识Ajax/p1.png" title="Ajax的工作原理">
+<h2 id="XMLHttpRequest方法属性"><a href="#XMLHttpRequest方法属性" class="headerlink" title="XMLHttpRequest方法属性"></a>XMLHttpRequest方法属性</h2><img src="/Myblog/2019/02/21/Ajax详解-1-初识Ajax/p2.png" title="Ajax的方法和属性">
+<h1 id="Ajax原理实现"><a href="#Ajax原理实现" class="headerlink" title="Ajax原理实现"></a>Ajax原理实现</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;%--</span><br><span class="line">  Created by IntelliJ IDEA.</span><br><span class="line">  User: DELL</span><br><span class="line">  <span class="built_in">Date</span>: <span class="number">2019</span>/<span class="number">2</span>/<span class="number">17</span></span><br><span class="line">  Time: <span class="number">22</span>:<span class="number">06</span></span><br><span class="line">  To change <span class="keyword">this</span> template use File | Settings | File Templates.</span><br><span class="line">--%&gt;</span><br><span class="line">&lt;%@ page contentType=<span class="string">"text/html;charset=UTF-8"</span> language=<span class="string">"java"</span> %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;title&gt;小白技术博客&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">    &lt;script&gt;</span></span><br><span class="line"><span class="regexp">      window.onload = function () &#123;</span></span><br><span class="line"><span class="regexp">          /</span><span class="regexp">/1.获取a节点并添加click点击事件</span></span><br><span class="line"><span class="regexp">          document.getElementsByTagName("a")[0].onclick=function () &#123;</span></span><br><span class="line"><span class="regexp">              /</span><span class="regexp">/3.创建一个 XMLHttpRequest 对象</span></span><br><span class="line"><span class="regexp">              var request = new XMLHttpRequest();</span></span><br><span class="line"><span class="regexp">              /</span><span class="regexp">/4.准备发送请求的数据</span></span><br><span class="line"><span class="regexp">              var url = this.href;/</span><span class="regexp">/准备url路径</span></span><br><span class="line"><span class="regexp">              var method = "GET";/</span><span class="regexp">/准备请求方式（POST/</span>GET）</span><br><span class="line">              <span class="comment">//5.调用XMLHttpRequest对象的open方法</span></span><br><span class="line">              request.open(method,url);</span><br><span class="line">              <span class="comment">//6.调用XMLHttpRequest对象的send方法</span></span><br><span class="line">              request.send(<span class="literal">null</span>);<span class="comment">//发射请求</span></span><br><span class="line">              <span class="comment">//7.为XMLHttpRequest对象添加 onreadystatechange事件</span></span><br><span class="line">              request.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="comment">//HTTP状态改变响应事件</span></span><br><span class="line">                  alert(request.readyState);<span class="comment">//实时显示readyState的状态</span></span><br><span class="line">              <span class="comment">//8.判断readyState为 4 时响应完成</span></span><br><span class="line">                  <span class="keyword">if</span>(request.readyState==<span class="number">4</span>)&#123;</span><br><span class="line">              <span class="comment">//9.判断该响应是否可用 status为200 或 304 时，响应正确</span></span><br><span class="line">                      <span class="keyword">if</span>(request.status==<span class="number">200</span>||request.status==<span class="number">304</span>)</span><br><span class="line">              <span class="comment">//10.显示响应得到的数据            </span></span><br><span class="line">                          alert(request.responseText);</span><br><span class="line">                      &#125;</span><br><span class="line">                  &#125;</span><br><span class="line">              &#125;</span><br><span class="line">              <span class="comment">//2.取消默认行为</span></span><br><span class="line">              <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">     &lt;a href=<span class="string">"./hellow"</span>&gt;nihao&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>body&gt;</span><br><span class="line">&lt;<span class="regexp">/html&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -499,6 +503,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/Myblog/tags/Ajax/" rel="tag"># Ajax</a>
+          
+        </div>
+      
 
       
       
@@ -508,8 +518,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Myblog/2019/02/08/并查集的理解和代码实现/" rel="next" title="并查集的理解和代码实现">
-                <i class="fa fa-chevron-left"></i> 并查集的理解和代码实现
+              <a href="/Myblog/2019/02/21/Ajax-3-Ajax的jquery用法/" rel="next" title="Ajax(3)--Ajax的jquery用法">
+                <i class="fa fa-chevron-left"></i> Ajax(3)--Ajax的jquery用法
               </a>
             
           </div>
@@ -517,10 +527,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Myblog/2019/02/11/着色问题思想和代码总结/" rel="prev" title="着色问题思想和代码总结">
-                着色问题思想和代码总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -672,7 +678,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是Ajax？"><span class="nav-number">1.</span> <span class="nav-text">什么是Ajax？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ajax原理"><span class="nav-number">2.</span> <span class="nav-text">Ajax原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ajax工作流程"><span class="nav-number">2.1.</span> <span class="nav-text">Ajax工作流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XMLHttpRequest方法属性"><span class="nav-number">2.2.</span> <span class="nav-text">XMLHttpRequest方法属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ajax原理实现"><span class="nav-number">3.</span> <span class="nav-text">Ajax原理实现</span></a></li></ol></div>
             
 
           </div>
