@@ -373,6 +373,365 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/03/05/ACM基础-备战蓝桥/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="连贺扬">
+      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
+      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拼搏岁月">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Myblog/2019/03/05/ACM基础-备战蓝桥/" class="post-title-link" itemprop="url">ACM基础</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-05 10:25:36 / 修改时间：11:33:47" itemprop="dateCreated datePublished" datetime="2019-03-05T10:25:36+08:00">2019-03-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/ACM算法/" itemprop="url" rel="index"><span itemprop="name">ACM算法</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1-最大公约数"><a href="#1-最大公约数" class="headerlink" title="1.最大公约数"></a>1.最大公约数</h1><p>辗转相除法：<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(a&lt;b)&#123;</span><br><span class="line">        swap(a,b);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> b==<span class="number">0</span> ? a:gcd(b,a%b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="2-最小公倍数"><a href="#2-最小公倍数" class="headerlink" title="2.最小公倍数"></a>2.最小公倍数</h1><p>定理： s:为a，b的最大公约数  x:为a，b的最小公倍数，则存在: a<em>b = s</em>x;<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(a&lt;b)&#123;</span><br><span class="line">        swap(a,b);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> b==<span class="number">0</span> ? a:gcd(b,a%b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">lcm</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (a*b)/gcd(a,b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="3-Fibonacci数列"><a href="#3-Fibonacci数列" class="headerlink" title="3.Fibonacci数列"></a>3.Fibonacci数列</h1><p>1，1，2，3，5，8，13。。。。。。。这样的数列叫做斐波那契数列<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">100</span>];</span><br><span class="line">a[<span class="number">0</span>]=<span class="number">1</span>;a[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;<span class="number">100</span>;i++)&#123;</span><br><span class="line">    a[i]=a[i<span class="number">-1</span>]+a[i<span class="number">-2</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="4-数组的初始化"><a href="#4-数组的初始化" class="headerlink" title="4. 数组的初始化"></a>4. 数组的初始化</h1><h2 id="memset初始化"><a href="#memset初始化" class="headerlink" title="memset初始化"></a>memset初始化</h2><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">100</span>];</span><br><span class="line"><span class="built_in">memset</span>(a,<span class="number">0</span>,<span class="keyword">sizeof</span> a);<span class="comment">//int数组初始化为0</span></span><br><span class="line"><span class="built_in">memset</span>(a,<span class="number">-1</span>,<span class="keyword">sizeof</span> a);<span class="comment">//int数组初始化为-1</span></span><br><span class="line"><span class="comment">//重点：不要以为 写什么 就初始化为什么，不是这样的，具体原理可以去百度，例如：</span></span><br><span class="line"><span class="built_in">memset</span>(a,<span class="number">88</span>,<span class="keyword">sizeof</span> a);<span class="comment">//int数组初始化为一个很大的数，略大于INT_MAX的二分之一</span></span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>];</span><br><span class="line"><span class="built_in">memset</span>(b,<span class="string">'0'</span>,<span class="keyword">sizeof</span> b);<span class="comment">//char数组初始化为字符0</span></span><br></pre></td></tr></table></figure>
+<h2 id="fill初始化"><a href="#fill初始化" class="headerlink" title="fill初始化"></a>fill初始化</h2><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fill(b,b+<span class="number">50</span>,<span class="string">'w'</span>);<span class="comment">//将字符数组b的前50个初始化为字符w</span></span><br><span class="line">fill(a,a+<span class="number">50</span>,<span class="number">100</span>);<span class="comment">//将int数组a的前50个初始化为100</span></span><br><span class="line"><span class="comment">//注：fill虽然方便灵活但，速度要比memset慢，所以能用memset的情况下，尽量不要用fill</span></span><br></pre></td></tr></table></figure>
+<h1 id="素数问题"><a href="#素数问题" class="headerlink" title="素数问题"></a>素数问题</h1><h2 id="素数打表（筛法求素数）"><a href="#素数打表（筛法求素数）" class="headerlink" title="素数打表（筛法求素数）"></a>素数打表（筛法求素数）</h2><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1e5</span>;</span><br><span class="line"><span class="keyword">int</span> prime[N];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;N;i++) prime[i]=<span class="number">1</span>;<span class="comment">//先全部初始化为素数</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i*i&lt;N;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(prime[i]==<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i*i;j&lt;N;j+=i)&#123;</span><br><span class="line">                prime[j]=<span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="质因数打表"><a href="#质因数打表" class="headerlink" title="质因数打表"></a>质因数打表</h2><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1e5</span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; prime[N];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i*i&lt;N;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(prime[i].size()==<span class="number">0</span>)&#123;<span class="comment">//prime[i].size()==0说明这个数是质数</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i;j&lt;N;j+=i)&#123;</span><br><span class="line">                <span class="comment">//将这个质数k加入到k，2*k，3*k中形成他们的一个质因子</span></span><br><span class="line">                prime[j].push_back(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="因数打表"><a href="#因数打表" class="headerlink" title="因数打表"></a>因数打表</h2><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100000</span> + <span class="number">5</span>;  </span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span> &gt; factor[N];  </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;  </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; N; i ++)&#123;  </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = i; j &lt; N; j += i)&#123;  </span><br><span class="line">            factor[j].push_back(i);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="质因数分解"><a href="#质因数分解" class="headerlink" title="质因数分解"></a>质因数分解</h2><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1e5</span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; prime[N];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i*i&lt;N;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(prime[i].size()==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i;j&lt;N;j+=i)&#123;</span><br><span class="line">                temp=j;</span><br><span class="line">                <span class="keyword">while</span>(temp%i==<span class="number">0</span>)&#123;</span><br><span class="line">                    prime[j].push_back(i);</span><br><span class="line">                    temp/=i;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/02/26/数据结构之线性表/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="连贺扬">
+      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
+      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拼搏岁月">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Myblog/2019/02/26/数据结构之线性表/" class="post-title-link" itemprop="url">数据结构之线性表</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-26 10:20:49 / 修改时间：10:46:08" itemprop="dateCreated datePublished" datetime="2019-02-26T10:20:49+08:00">2019-02-26</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/ACM算法/" itemprop="url" rel="index"><span itemprop="name">ACM算法</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本篇文章我们学习线性表，首先我们要知道数据结构分为逻辑结构和物理结构，逻辑结构分为线性结构，集合结构<br>，树形结构和图形结构四大类。物理结构分为顺序存储结构和链式存储结构。而今天所讲的线性表，自然是属于线性<br>结构，而根据物理存储的方式不同，线性表又可以分为顺序存储的线性表（顺序表），和链式存储的线性表（链表）</p>
+<h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><pre><code>线性表（List）：由零个或多个数据元素组成的有限序列。  
+注意：
+1.线性表是一个序列。
+
+2.0个元素构成的线性表是空表。
+
+3.线性表中的第一个元素无前驱，最后一个元素无后继，其他元素有且只有一个前驱和后继。
+
+4.线性表是有长度的，其长度就是元素个数，且线性表的元素个数是有限的，也就是说，线性表的长度是有限的。
+如果用数学语言来进行定义，可如下：
+若将线性表记为（a1,…,ai-1,ai,ai+1,…an）,则表中ai-1领先于ai,ai领先于ai+1,称ai-1是ai的直接前驱元素,ai+1是ai的直接后继元素。
+</code></pre><h2 id="线性表的基本操作"><a href="#线性表的基本操作" class="headerlink" title="线性表的基本操作"></a>线性表的基本操作</h2><pre><code>InitList(*L);初始化操作，建立一个空的线性表
+ListEmpty(L);判断线性表是否为空，空则返回true，否则返回false
+ClearList(*L);将线性表清空
+GetElem(L,i,*e);将线性表L中第i哥元素返回给e
+LocateElem(L,e);在线性表L中查找元素e，如果查找成功，返回该元素在表中序号，如果查找失败返回0
+ListInsert(*L,i,e);在线性表L中的i位置插入元素e
+ListDelete(*L,i,*e);删除线性表L中第i个位置上的元素，并用*e返回其值
+ListLength();返回线性表L中元素的个数
+
+对于不同的应用，线性表的操作是不同的，上述操作是最基本的
+对于实际问题中涉及的关于线性表的更复杂操作，完全可以用这些基本操作的组合来实现。
+</code></pre><h2 id="两种不同线性表"><a href="#两种不同线性表" class="headerlink" title="两种不同线性表"></a>两种不同线性表</h2><h3 id="顺序表"><a href="#顺序表" class="headerlink" title="顺序表"></a>顺序表</h3><pre><code>顺序表是指顺序存储结构的线性表，指的是用一段地址连续的存储单元依次存储线性表的数据元素。  
+顺序表表现在物理内存中，也就是物理上的存储方式，事实上就是在内存中找个初始地址，然后通过
+占位的形式，把一定的内存空间给占了，然后把相同数据类型的数据元素依次放在这块空地中。注意，
+这块物理内存的地址空间是连续的。   
+举 个例子，比如C语言中的基本变量的存储就是连续的存储在内存中的，比如声明一个整数i，在64位
+系统中整数i在内存中占8字节，那么系统就会在内存中为这 个整型变量分配一个长度为8个字节的连续
+的地址空间，然后把这个i的二进制形式从高地址向低地址存储，长度不足时候，最高位用0补齐。
+</code></pre>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/02/21/Ajax详解-1-初识Ajax/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1470,7 +1829,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-02-24 10:34:23" itemprop="dateModified" datetime="2019-02-24T10:34:23+08:00">2019-02-24</time>
+                <time title="修改时间：2019-02-26 10:21:09" itemprop="dateModified" datetime="2019-02-26T10:21:09+08:00">2019-02-26</time>
               
             
           </span>
@@ -1525,183 +1884,10 @@
         
           
             <p>#前言<br>这节教程小白会为大家介绍一下什么是IDEA,IDEA 的特点和有点,以及IDEA需要学习哪些东西<br>本系列的技术总结全部来自B站教学视频如果想详细学习IDEA的知识请移步源视频。<br><figure class="highlight plain"><figcaption><span>请点击右侧Link前往</span><a href="https://www.bilibili.com/video/av37601375?from=search&seid=15472318330587263935" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B站IDEA教学视频</span><br></pre></td></tr></table></figure><br>本篇内容:<br>    1.IDEA简介<br>    2.IDEA特色<br>    3.IDEA学习图解</p>
-<p>#正文</p>
-<p>##IDEA简介<br>   IDEA 全称IntelliJ IDEA，是用于java语言开发的集成环境（也可用于其他语言），<br>   IntelliJ在业界被公认为最好的java开发工具之一，尤其在智能代码助手、代码自动提<br>   示、重构、J2EE支持、 Ant、JUnit、CVS整合、代码审查、 创新的GUI设计等方面的<br>   功能可以说是超常的。IDEA是JetBrains公司的产品，这家公司总部位于捷克共和国的<br>   首都布拉格，开发人员以严谨著称的东欧程序员为主。 </p>
-<p>##IDEA特色</p>
-<p>##IDEA学习图解<br><img src="/Myblog/2019/02/17/IDEA系列教程-初识IDEA/p1.png" title="IDEA学习图解"></p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="IDEA简介"><a href="#IDEA简介" class="headerlink" title="IDEA简介"></a>IDEA简介</h2><p>   IDEA 全称IntelliJ IDEA，是用于java语言开发的集成环境（也可用于其他语言），<br>   IntelliJ在业界被公认为最好的java开发工具之一，尤其在智能代码助手、代码自动提<br>   示、重构、J2EE支持、 Ant、JUnit、CVS整合、代码审查、 创新的GUI设计等方面的<br>   功能可以说是超常的。IDEA是JetBrains公司的产品，这家公司总部位于捷克共和国的<br>   首都布拉格，开发人员以严谨著称的东欧程序员为主。 </p>
+<h2 id="IDEA特色"><a href="#IDEA特色" class="headerlink" title="IDEA特色"></a>IDEA特色</h2><h2 id="IDEA学习图解"><a href="#IDEA学习图解" class="headerlink" title="IDEA学习图解"></a>IDEA学习图解</h2><img src="/Myblog/2019/02/17/IDEA系列教程-初识IDEA/p1.png" title="IDEA学习图解">
+<p>1</p>
 
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/02/16/数据结构之链表/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="连贺扬">
-      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
-      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="拼搏岁月">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Myblog/2019/02/16/数据结构之链表/" class="post-title-link" itemprop="url">数据结构之链表</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-02-16 12:18:14" itemprop="dateCreated datePublished" datetime="2019-02-16T12:18:14+08:00">2019-02-16</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-02-24 10:34:23" itemprop="dateModified" datetime="2019-02-24T10:34:23+08:00">2019-02-24</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/ACM算法/" itemprop="url" rel="index"><span itemprop="name">ACM算法</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
           
         
       
@@ -1909,171 +2095,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/02/08/hello-world/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="连贺扬">
-      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
-      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="拼搏岁月">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Myblog/2019/02/08/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-02-08 14:42:18" itemprop="dateCreated datePublished" datetime="2019-02-08T14:42:18+08:00">2019-02-08</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/人工智能/" itemprop="url" rel="index"><span itemprop="name">人工智能</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2123,7 +2144,7 @@
                 
                   <a href="/Myblog/archives">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2167,7 +2188,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
