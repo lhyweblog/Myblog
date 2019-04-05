@@ -161,9 +161,9 @@
   </style>
 </noscript>
 
-	
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <script src="/Myblog/live2d-widget/autoload.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
 </head>
 
 <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -376,6 +376,360 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/04/05/解题报告-CFRound487C/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="连贺扬">
+      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
+      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拼搏岁月">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Myblog/2019/04/05/解题报告-CFRound487C/" class="post-title-link" itemprop="url">解题报告-CFRound487C</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-05 23:11:21 / 修改时间：23:14:11" itemprop="dateCreated datePublished" datetime="2019-04-05T23:11:21+08:00">2019-04-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/ACM算法/" itemprop="url" rel="index"><span itemprop="name">ACM算法</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/Myblog/2019/04/05/解题报告-CFRound487C/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/04/05/解题报告-CFRound487C/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><figcaption><span>点击左侧link跳转</span><a href="http://codeforces.com/problemset/problem/989/C" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原题连接</span><br></pre></td></tr></table></figure>
+<h1 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h1><p>n*m的方格图.<br>现在有4种颜色”A,B,C,D”.<br>你被要求给每个格子都涂上其中一种颜色.<br>然后上下左右相邻的两个格子如果颜色相同,那么被认为是在对应颜色的同一个联通块中.<br>现在给你a,b,c,d表示想要达到的目标图中,A,B,C,D颜色的联通块的个数,请你画出一个符合要求的图,即输出任意一组n,m以及对应的每个点都被染色的方格图.</p>
+<p>输入：<br>第一行有4个整数a,b,c,d(1&lt;=a,b,c,d&lt;=100)分别表示4种颜色的联通块的数量.</p>
+<p>输出：<br>第一行,为两个整数n,m(1&lt;=n,m&lt;=50).<br>接下来n行,每行m个字符.(每个字符只能是A,B,C,D中的一个)来描述这个全都被染色的方格图.</p>
+<h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><p>用最优解得方法，不管什么数据，直接用最大50，50数组，然后。。。。算了，看代码吧</p>
+<figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">52</span>;</span><br><span class="line"><span class="keyword">char</span> tu[<span class="number">52</span>][<span class="number">52</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a,b,c,d;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">25</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">25</span>;j++)&#123;</span><br><span class="line"></span><br><span class="line">           tu[i][j]=<span class="string">'A'</span>;</span><br><span class="line">           tu[i+<span class="number">25</span>][j]=<span class="string">'B'</span>;</span><br><span class="line">           tu[i+<span class="number">25</span>][j+<span class="number">25</span>]=<span class="string">'C'</span>;</span><br><span class="line">           tu[i][j+<span class="number">25</span>]=<span class="string">'D'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b&gt;&gt;c&gt;&gt;d)&#123;</span><br><span class="line">        <span class="keyword">bool</span> flag=<span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">int</span> k=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">25</span>;i+=<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=k;j&lt;<span class="number">25</span>;j+=<span class="number">2</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(c==<span class="number">1</span>)&#123;</span><br><span class="line">                  flag=<span class="literal">true</span>;</span><br><span class="line">                  <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                tu[i][j]=<span class="string">'C'</span>;</span><br><span class="line">                c--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(flag) <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">if</span>(k ==<span class="number">0</span>) k=<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> k=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        flag=<span class="literal">false</span>;</span><br><span class="line">        k=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">25</span>;i&lt;<span class="number">50</span>;i+=<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=k;j&lt;<span class="number">25</span>;j+=<span class="number">2</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(d==<span class="number">1</span>)&#123;</span><br><span class="line">                  flag=<span class="literal">true</span>;</span><br><span class="line">                  <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                tu[i][j]=<span class="string">'D'</span>;</span><br><span class="line">                d--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(flag) <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">if</span>(k ==<span class="number">0</span>) k=<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> k=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        flag=<span class="literal">false</span>;</span><br><span class="line">        k=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">25</span>;i+=<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=k+<span class="number">25</span>;j&lt;<span class="number">50</span>;j+=<span class="number">2</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(b==<span class="number">1</span>)&#123;</span><br><span class="line">                  flag=<span class="literal">true</span>;</span><br><span class="line">                  <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                tu[i][j]=<span class="string">'B'</span>;</span><br><span class="line">                b--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(flag) <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">if</span>(k ==<span class="number">0</span>) k=<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> k=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        flag=<span class="literal">false</span>;</span><br><span class="line">        k=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">25</span>;i&lt;<span class="number">50</span>;i+=<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=k+<span class="number">25</span>;j&lt;<span class="number">50</span>;j+=<span class="number">2</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(a==<span class="number">1</span>)&#123;</span><br><span class="line">                  flag=<span class="literal">true</span>;</span><br><span class="line">                  <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                tu[i][j]=<span class="string">'A'</span>;</span><br><span class="line">                a--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(flag) <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">if</span>(k ==<span class="number">0</span>) k=<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> k=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="number">50</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">50</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">50</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">50</span>;j++)&#123;</span><br><span class="line">                <span class="built_in">cout</span>&lt;&lt;tu[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/04/05/解题报告之CFround53D/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="连贺扬">
+      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
+      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拼搏岁月">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Myblog/2019/04/05/解题报告之CFround53D/" class="post-title-link" itemprop="url">解题报告之CFround53D</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-05 22:01:37 / 修改时间：22:25:48" itemprop="dateCreated datePublished" datetime="2019-04-05T22:01:37+08:00">2019-04-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/ACM算法/" itemprop="url" rel="index"><span itemprop="name">ACM算法</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/Myblog/2019/04/05/解题报告之CFround53D/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/04/05/解题报告之CFround53D/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><figcaption><span>点击左侧link跳转</span><a href="http://codeforces.com/problemset/problem/1073/D" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原题连接</span><br></pre></td></tr></table></figure>
+<h1 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h1><p>有一个环形的摊位,总共有n个摊位.<br>每个摊位的糖果价格为a[i].<br>(n号摊位和1号摊位相邻).<br>现在小x从1号摊位开始,进行如下的买糖果策略:<br>1.如果他有足够的剩余的钱能够在第i号摊位买一个糖果,那么它就在该摊位买一个糖果.<br>2.决策完之后,它走到下一个摊位i+1号摊位,如果i=n的话,那么下一个摊位被定义为1号摊位.<br>问你如果初始的时候有T单位的钱的话,能买多少个糖果.</p>
+<p>输入：<br>第一行两个整数n,T(1&lt;=n&lt;=2*10^5,1&lt;=T&lt;=10^18).<br>第二行有n个整数a1,a2…an(1&lt;=ai&lt;=10^9).</p>
+<p>输出：<br>输出一个整数,表示小x最后买下的糖果的个数.</p>
+<h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><p>模拟买糖过程，遍历一圈，找出一圈必须要买得钱数sum和个数cnt，然后用剩余总钱数去算(T/sum*cnt)，这种情况下能买到什么时候以及买多少<br>再跟新 剩余钱数T = T%sum。然后接着遍历 看剩下T钱得情况下需要怎么买，知道T小于最小得糖果钱数，模拟结束，跳出模拟。<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> int long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span>  N =<span class="number">200010</span>;</span><br><span class="line"><span class="keyword">int</span> n,T;</span><br><span class="line"><span class="keyword">int</span> a[N];</span><br><span class="line"><span class="keyword">int</span> mina= LONG_LONG_MAX;</span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;T)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">            mina=min(mina,a[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> result=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>((sum+a[i])&lt;=T)&#123;</span><br><span class="line">                cnt++;</span><br><span class="line">                sum+=a[i];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(i==n<span class="number">-1</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(sum==<span class="number">0</span>)&#123;<span class="comment">//这里有个坑点，如果不进行特判，会在1，1，10这样的数据中，sum等于0，没办法做除数</span></span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                result=result+(T/sum)*cnt;</span><br><span class="line">                T=T%sum;</span><br><span class="line">                cnt=<span class="number">0</span>;</span><br><span class="line">                sum=<span class="number">0</span>;</span><br><span class="line">                i=<span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(T&lt;mina)&#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;result&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/03/23/解题报告之P1164小A点菜/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -421,20 +775,62 @@
                 
               
 
-              <time title="创建时间：2019-03-23 17:34:00 / 修改时间：17:46:13" itemprop="dateCreated datePublished" datetime="2019-03-23T17:34:00+08:00">2019-03-23</time>
+              <time title="创建时间：2019-03-23 17:34:00" itemprop="dateCreated datePublished" datetime="2019-03-23T17:34:00+08:00">2019-03-23</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-05 22:03:26" itemprop="dateModified" datetime="2019-04-05T22:03:26+08:00">2019-04-05</time>
               
             
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/ACM算法/" itemprop="url" rel="index"><span itemprop="name">ACM算法</span></a></span>
+
+                
+                
+              
+            </span>
+          
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/Myblog/2019/03/23/解题报告之P1164小A点菜/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/03/23/解题报告之P1164小A点菜/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -605,6 +1001,18 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/Myblog/2019/03/10/解题报告-nyoj1356/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/03/10/解题报告-nyoj1356/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -769,6 +1177,18 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/Myblog/2019/03/09/MVC设计案例-上/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/03/09/MVC设计案例-上/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -802,169 +1222,6 @@
 <h1 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h1>开发顺序：model -&gt; view -&gt; controcler<h2 id="model层开发"><a href="#model层开发" class="headerlink" title="model层开发"></a>model层开发</h2><h3 id="创建数据库表"><a href="#创建数据库表" class="headerlink" title="创建数据库表"></a>创建数据库表</h3>通过 navicat 建立一个数据库MVCtest，并建立一个表 Students<br>拥有字段：id(Intager),name(String),adress(String),phone(String);</li>
 </ul>
 <h3 id="加入C3P0链接池"><a href="#加入C3P0链接池" class="headerlink" title="加入C3P0链接池"></a>加入C3P0链接池</h3><h3 id="加入DAO，DBUilts和CustomerDAO接口"><a href="#加入DAO，DBUilts和CustomerDAO接口" class="headerlink" title="加入DAO，DBUilts和CustomerDAO接口"></a>加入DAO，DBUilts和CustomerDAO接口</h3><p>1.DAO基本类的实现<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.lhy.JavaWeb.DAO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">*功能描述:</span></span><br><span class="line"><span class="comment"> * 封装了基本的CRUD方法，供子类继承使用</span></span><br><span class="line"><span class="comment"> * 当前DAO直接在方法中获得数据库链接</span></span><br><span class="line"><span class="comment"> * 整个DAO采取DBUtils解决方案</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DAO</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">private</span>  Class&lt;T&gt; clazz;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    *功能描述:返回某一条数据的字段值</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@auther</span>:连贺扬</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@param</span>:</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@return</span>:</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@data</span>:</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">public</span> &lt;E&gt; <span class="function">E <span class="title">getForValue</span><span class="params">(String sql, Object ... args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    *功能描述:返回T的一个列表</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@auther</span>:连贺扬</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@param</span>:</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@return</span>:</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@data</span>:</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;T&gt; <span class="title">getForList</span><span class="params">(String sql, Object ... args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    *功能描述:返回对应的T的实体类的一个对象</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@auther</span>:连贺扬</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@param</span>:</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@return</span>:</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@data</span>:</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">get</span><span class="params">(String sql,Object ... args)</span></span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    *功能描述:该方法封装了INSERT，DELETE，UPDATE方法</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@auther</span>:连贺扬</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@param</span>: sql:SQL语句，args：填充了SQL语句的占位符。</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@return</span>:</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(String sql,Object ... args)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>2.JdbcUitls类的实现<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.lhy.JavaWeb.DB;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">*功能描述:</span></span><br><span class="line"><span class="comment"> * JDBC的操作工具类</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JdbcUtils</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    *功能描述:释放数据库一个链接</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@auther</span>:连贺扬</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@param</span>:</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@return</span>:</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@data</span>:</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">releaseConnection</span><span class="params">(Connection connection)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    *功能描述:返回数据库的一个Connection对象</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@auther</span>:连贺扬</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@param</span>:</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@return</span>:</span></span><br><span class="line"><span class="comment">    *  <span class="doctag">@data</span>:</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Connection <span class="title">getConnection</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>3.实体类 Students实现<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.lhy.JavaWeb.Enity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.security.PrivateKey;</span><br><span class="line"><span class="keyword">import</span> java.util.PrimitiveIterator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Students</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span>  Integer id;</span><br><span class="line">    <span class="keyword">private</span>  String name;</span><br><span class="line">    <span class="keyword">private</span>  String adress;</span><br><span class="line">    <span class="keyword">private</span>  Integer phone;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getAdress</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> adress;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAdress</span><span class="params">(String adress)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.adress = adress;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getPhone</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> phone;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPhone</span><span class="params">(Integer phone)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.phone = phone;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Students&#123;"</span> +</span><br><span class="line">                <span class="string">"id="</span> + id +</span><br><span class="line">                <span class="string">", name='"</span> + name + <span class="string">'\''</span> +</span><br><span class="line">                <span class="string">", adress='"</span> + adress + <span class="string">'\''</span> +</span><br><span class="line">                <span class="string">", phone="</span> + phone +</span><br><span class="line">                <span class="string">'&#125;'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>4.StudentsDAO的接口<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.lhy.JavaWeb.EnityDAO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.lhy.JavaWeb.Enity.Students;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">StudentsDAO</span> </span>&#123;</span><br><span class="line">     <span class="function"><span class="keyword">public</span> List&lt;Students&gt; <span class="title">getAll</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">(Students students)</span></span>;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> Students <span class="title">get</span><span class="params">(Integer id)</span></span>;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete</span><span class="params">(Integer id)</span></span>;</span><br><span class="line">     <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *功能描述:返回该名字的数据有几条。</span></span><br><span class="line"><span class="comment">     *  <span class="doctag">@auther</span>:连贺扬</span></span><br><span class="line"><span class="comment">     *  <span class="doctag">@param</span>:</span></span><br><span class="line"><span class="comment">     *  <span class="doctag">@return</span>:</span></span><br><span class="line"><span class="comment">     *  <span class="doctag">@data</span>:</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">getCountWithName</span><span class="params">(String name)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>5.StudentsDAO的接口的实现类<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.lhy.JavaWeb.EnityDAO.Impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.lhy.JavaWeb.DAO.DAO;</span><br><span class="line"><span class="keyword">import</span> com.lhy.JavaWeb.Enity.Students;</span><br><span class="line"><span class="keyword">import</span> com.lhy.JavaWeb.EnityDAO.StudentsDAO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentsDAOImpl</span> <span class="keyword">extends</span> <span class="title">DAO</span>&lt;<span class="title">Students</span>&gt; <span class="keyword">implements</span> <span class="title">StudentsDAO</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Students&gt; <span class="title">getAll</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">(Students students)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Students <span class="title">get</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">getCountWithName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/03/09/解题报告-nyoj586/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="连贺扬">
-      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
-      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="拼搏岁月">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Myblog/2019/03/09/解题报告-nyoj586/" class="post-title-link" itemprop="url">解题报告-nyoj586</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-03-09 13:08:28 / 修改时间：13:17:17" itemprop="dateCreated datePublished" datetime="2019-03-09T13:08:28+08:00">2019-03-09</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/ACM算法/" itemprop="url" rel="index"><span itemprop="name">ACM算法</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><figcaption><span>点击左侧link跳转</span><a href="http://nyoj.top/problem/586" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原题连接</span><br></pre></td></tr></table></figure>
-<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>典型的求解最小值中得最大值问题，所以可以用二分的思想枚举所有可能的最小距离，在其中找出最大的可能<br>而验证这个距离是否符合题意，又要用到贪心的思想去验证。for循环搜索安排牛的点，当这个点与上个点间距离大于最小距离时，cnt++，<br>搜索完毕，如果cnt大于牛的数量，那么这个最小距离就符合二分的接着向更大的mid~r间枚举，如果cnt小于牛的数量，说明<br>不符合，二分向l~mid区间枚举。</p>
-<h1 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h1><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> a[N];</span><br><span class="line"><span class="keyword">int</span> n,c;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> w=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> str=a[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i]-str&gt;=x)&#123;</span><br><span class="line">            w++;</span><br><span class="line">            str=a[i];</span><br><span class="line">            <span class="keyword">if</span>(w&gt;=c)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//    cout&lt;&lt;"x: "&lt;&lt;x&lt;&lt;"w: "&lt;&lt;w&lt;&lt;endl;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;c)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">        &#125;</span><br><span class="line">        sort(a,a+n);</span><br><span class="line">        <span class="keyword">int</span> r=a[n<span class="number">-1</span>]-a[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> l=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(l&lt;=r)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l+(r-l)/<span class="number">2</span>;</span><br><span class="line"><span class="comment">//        cout&lt;&lt;"l:"&lt;&lt;l&lt;&lt;"   r:"&lt;&lt;r&lt;&lt;"   mid:"&lt;&lt;mid&lt;&lt;endl;</span></span><br><span class="line">            <span class="keyword">if</span>(judge(mid))&#123;</span><br><span class="line">                l=mid+<span class="number">1</span>;</span><br><span class="line">                ans=max(mid,ans);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                r=mid<span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
           
         
@@ -1111,6 +1368,18 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/Myblog/2019/03/09/基础背包问题总结/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/03/09/基础背包问题总结/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1143,6 +1412,181 @@
 <figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N =<span class="number">50000</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> f[N];</span><br><span class="line"><span class="keyword">int</span> c[<span class="number">30</span>];</span><br><span class="line"><span class="keyword">int</span> w[<span class="number">30</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m,n;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;m&gt;&gt;n)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="keyword">int</span> x,y;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">			w[i]=x;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			c[i]=y;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = m;j&gt;=w[i];j--)&#123;		</span><br><span class="line">                f[j]=max(f[j],f[j-w[i]]+c[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;f[m]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="完全背包"><a href="#完全背包" class="headerlink" title="完全背包"></a>完全背包</h1><p>完全背包问题与0-1背包相比，0-1背包的物品i  只有一个，放了之后就没了。而完全背包，每个物品 i 都可以无限次放入<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N =<span class="number">50000</span>+<span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> f[N];</span><br><span class="line"><span class="keyword">int</span> c[<span class="number">30</span>];</span><br><span class="line"><span class="keyword">int</span> w[<span class="number">30</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m,n;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;m&gt;&gt;n)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="keyword">int</span> x,y;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">			w[i]=x;</span><br><span class="line">			c[i]=y;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = w[i];j&lt;=m;j++)&#123;		<span class="comment">//与0-1 背包相比，唯一的区别就在这里，是顺序遍历</span></span><br><span class="line">                f[j]=max(f[j],f[j-w[i]]+c[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;f[m]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h1 id="多重背包"><a href="#多重背包" class="headerlink" title="多重背包"></a>多重背包</h1><p>多重背包 和 完全背包相比而言，区别就在，完全背包，每个物品 i 可以无限次放入，而多重背包，每个物品i 最多放入s[i]次。<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N =<span class="number">50000</span>+<span class="number">10</span>;</span><br><span class="line"><span class="comment">/* run this program using the console pauser or add your own getch, system("pause") or input loop */</span></span><br><span class="line"><span class="keyword">int</span> f[N];</span><br><span class="line"><span class="keyword">int</span> c[<span class="number">30</span>];</span><br><span class="line"><span class="keyword">int</span> w[<span class="number">30</span>]; </span><br><span class="line"><span class="keyword">int</span> s[i];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m,n;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;m&gt;&gt;n)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;w[i]&gt;&gt;c[i]&gt;&gt;s[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = w[i];j&lt;=m;j++)&#123;	</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> k =<span class="number">0</span>;k&lt;s[i];k++)&#123;</span><br><span class="line">					<span class="keyword">if</span>(j-k*w[i]&lt;<span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">					f[j]=max(f[j],f[j-k*w[i]]+k*c[i]);</span><br><span class="line">				&#125;	</span><br><span class="line">                </span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;f[m]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/03/09/解题报告-nyoj586/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="连贺扬">
+      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
+      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拼搏岁月">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Myblog/2019/03/09/解题报告-nyoj586/" class="post-title-link" itemprop="url">解题报告-nyoj586</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-09 13:08:28 / 修改时间：13:17:17" itemprop="dateCreated datePublished" datetime="2019-03-09T13:08:28+08:00">2019-03-09</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/ACM算法/" itemprop="url" rel="index"><span itemprop="name">ACM算法</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/Myblog/2019/03/09/解题报告-nyoj586/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/03/09/解题报告-nyoj586/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><figcaption><span>点击左侧link跳转</span><a href="http://nyoj.top/problem/586" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原题连接</span><br></pre></td></tr></table></figure>
+<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>典型的求解最小值中得最大值问题，所以可以用二分的思想枚举所有可能的最小距离，在其中找出最大的可能<br>而验证这个距离是否符合题意，又要用到贪心的思想去验证。for循环搜索安排牛的点，当这个点与上个点间距离大于最小距离时，cnt++，<br>搜索完毕，如果cnt大于牛的数量，那么这个最小距离就符合二分的接着向更大的mid~r间枚举，如果cnt小于牛的数量，说明<br>不符合，二分向l~mid区间枚举。</p>
+<h1 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h1><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> a[N];</span><br><span class="line"><span class="keyword">int</span> n,c;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> w=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> str=a[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i]-str&gt;=x)&#123;</span><br><span class="line">            w++;</span><br><span class="line">            str=a[i];</span><br><span class="line">            <span class="keyword">if</span>(w&gt;=c)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//    cout&lt;&lt;"x: "&lt;&lt;x&lt;&lt;"w: "&lt;&lt;w&lt;&lt;endl;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;c)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">        &#125;</span><br><span class="line">        sort(a,a+n);</span><br><span class="line">        <span class="keyword">int</span> r=a[n<span class="number">-1</span>]-a[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> l=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(l&lt;=r)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l+(r-l)/<span class="number">2</span>;</span><br><span class="line"><span class="comment">//        cout&lt;&lt;"l:"&lt;&lt;l&lt;&lt;"   r:"&lt;&lt;r&lt;&lt;"   mid:"&lt;&lt;mid&lt;&lt;endl;</span></span><br><span class="line">            <span class="keyword">if</span>(judge(mid))&#123;</span><br><span class="line">                l=mid+<span class="number">1</span>;</span><br><span class="line">                ans=max(mid,ans);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                r=mid<span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
           
         
@@ -1277,6 +1721,18 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/Myblog/2019/03/07/jsp学习记录/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/03/07/jsp学习记录/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1409,12 +1865,24 @@
                 
               
 
-              <time title="创建时间：2019-03-06 20:31:24 / 修改时间：20:47:59" itemprop="dateCreated datePublished" datetime="2019-03-06T20:31:24+08:00">2019-03-06</time>
+              <time title="创建时间：2019-03-06 20:31:24" itemprop="dateCreated datePublished" datetime="2019-03-06T20:31:24+08:00">2019-03-06</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-05 22:03:26" itemprop="dateModified" datetime="2019-04-05T22:03:26+08:00">2019-04-05</time>
               
             
           </span>
@@ -1441,6 +1909,18 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/Myblog/2019/03/06/解题报告之poj2488/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/03/06/解题报告之poj2488/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -1617,6 +2097,18 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/Myblog/2019/03/05/ACM基础-备战蓝桥/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/03/05/ACM基础-备战蓝桥/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1699,366 +2191,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/02/26/数据结构之线性表/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="连贺扬">
-      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
-      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="拼搏岁月">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Myblog/2019/02/26/数据结构之线性表/" class="post-title-link" itemprop="url">数据结构之线性表</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-02-26 10:20:49 / 修改时间：10:46:08" itemprop="dateCreated datePublished" datetime="2019-02-26T10:20:49+08:00">2019-02-26</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/ACM算法/" itemprop="url" rel="index"><span itemprop="name">ACM算法</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本篇文章我们学习线性表，首先我们要知道数据结构分为逻辑结构和物理结构，逻辑结构分为线性结构，集合结构<br>，树形结构和图形结构四大类。物理结构分为顺序存储结构和链式存储结构。而今天所讲的线性表，自然是属于线性<br>结构，而根据物理存储的方式不同，线性表又可以分为顺序存储的线性表（顺序表），和链式存储的线性表（链表）</p>
-<h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><pre><code>线性表（List）：由零个或多个数据元素组成的有限序列。  
-注意：
-1.线性表是一个序列。
-
-2.0个元素构成的线性表是空表。
-
-3.线性表中的第一个元素无前驱，最后一个元素无后继，其他元素有且只有一个前驱和后继。
-
-4.线性表是有长度的，其长度就是元素个数，且线性表的元素个数是有限的，也就是说，线性表的长度是有限的。
-如果用数学语言来进行定义，可如下：
-若将线性表记为（a1,…,ai-1,ai,ai+1,…an）,则表中ai-1领先于ai,ai领先于ai+1,称ai-1是ai的直接前驱元素,ai+1是ai的直接后继元素。
-</code></pre><h2 id="线性表的基本操作"><a href="#线性表的基本操作" class="headerlink" title="线性表的基本操作"></a>线性表的基本操作</h2><pre><code>InitList(*L);初始化操作，建立一个空的线性表
-ListEmpty(L);判断线性表是否为空，空则返回true，否则返回false
-ClearList(*L);将线性表清空
-GetElem(L,i,*e);将线性表L中第i哥元素返回给e
-LocateElem(L,e);在线性表L中查找元素e，如果查找成功，返回该元素在表中序号，如果查找失败返回0
-ListInsert(*L,i,e);在线性表L中的i位置插入元素e
-ListDelete(*L,i,*e);删除线性表L中第i个位置上的元素，并用*e返回其值
-ListLength();返回线性表L中元素的个数
-
-对于不同的应用，线性表的操作是不同的，上述操作是最基本的
-对于实际问题中涉及的关于线性表的更复杂操作，完全可以用这些基本操作的组合来实现。
-</code></pre><h2 id="两种不同线性表"><a href="#两种不同线性表" class="headerlink" title="两种不同线性表"></a>两种不同线性表</h2><h3 id="顺序表"><a href="#顺序表" class="headerlink" title="顺序表"></a>顺序表</h3><pre><code>顺序表是指顺序存储结构的线性表，指的是用一段地址连续的存储单元依次存储线性表的数据元素。  
-顺序表表现在物理内存中，也就是物理上的存储方式，事实上就是在内存中找个初始地址，然后通过
-占位的形式，把一定的内存空间给占了，然后把相同数据类型的数据元素依次放在这块空地中。注意，
-这块物理内存的地址空间是连续的。   
-举 个例子，比如C语言中的基本变量的存储就是连续的存储在内存中的，比如声明一个整数i，在64位
-系统中整数i在内存中占8字节，那么系统就会在内存中为这 个整型变量分配一个长度为8个字节的连续
-的地址空间，然后把这个i的二进制形式从高地址向低地址存储，长度不足时候，最高位用0补齐。
-</code></pre>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/02/21/Ajax详解-1-初识Ajax/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="连贺扬">
-      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
-      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="拼搏岁月">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Myblog/2019/02/21/Ajax详解-1-初识Ajax/" class="post-title-link" itemprop="url">Ajax详解(1)--初识Ajax</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-02-21 18:53:05 / 修改时间：21:34:07" itemprop="dateCreated datePublished" datetime="2019-02-21T18:53:05+08:00">2019-02-21</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/javaWeb/" itemprop="url" rel="index"><span itemprop="name">javaWeb</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="什么是Ajax？"><a href="#什么是Ajax？" class="headerlink" title="什么是Ajax？"></a>什么是Ajax？</h1><p>Ajax 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。</p>
-<p>Ajax的全称是Asynchronous JavaScript and XML，即异步JavaScript+XML。它并不是新的编程语言，而是几种原有技术的结合体。<br>通俗的讲呢，我个人的理解是，Ajax就是一种获取和发送数据，客户端与服务器端交互的手段，主要用于前后台的数据交互，数据获取，界面<br>数据异步更新等它由以下几种技术组合而成，包括：</p>
-<p>HTML/XHTML——主要的内容表示语言。<br>CSS——为XHTML提供文本格式定义。<br>DOM——对已载入的页面进行动态更新。<br>XML/json——数据交换格式。<br>XSLT——将XML转换为XHTML（用CSS修饰样式）。<br>XMLHttp——用XMLHttpRequest来和服务器进行异步通信，是主要的通信代理。<br>JavaScript——用来编写Ajax引擎的脚本语言。<br>实际上，在Ajax解决方案中这些技术都是可用的，不过只有三种是必须的：HTML/XHTML、DOM以及JavaScript。</p>
-<h1 id="Ajax原理"><a href="#Ajax原理" class="headerlink" title="Ajax原理"></a>Ajax原理</h1><h2 id="Ajax工作流程"><a href="#Ajax工作流程" class="headerlink" title="Ajax工作流程"></a>Ajax工作流程</h2><img src="/Myblog/2019/02/21/Ajax详解-1-初识Ajax/p1.png" title="Ajax的工作原理">
-<h2 id="XMLHttpRequest方法属性"><a href="#XMLHttpRequest方法属性" class="headerlink" title="XMLHttpRequest方法属性"></a>XMLHttpRequest方法属性</h2><img src="/Myblog/2019/02/21/Ajax详解-1-初识Ajax/p2.png" title="Ajax的方法和属性">
-<h1 id="Ajax原理实现"><a href="#Ajax原理实现" class="headerlink" title="Ajax原理实现"></a>Ajax原理实现</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;%--</span><br><span class="line">  Created by IntelliJ IDEA.</span><br><span class="line">  User: DELL</span><br><span class="line">  <span class="built_in">Date</span>: <span class="number">2019</span>/<span class="number">2</span>/<span class="number">17</span></span><br><span class="line">  Time: <span class="number">22</span>:<span class="number">06</span></span><br><span class="line">  To change <span class="keyword">this</span> template use File | Settings | File Templates.</span><br><span class="line">--%&gt;</span><br><span class="line">&lt;%@ page contentType=<span class="string">"text/html;charset=UTF-8"</span> language=<span class="string">"java"</span> %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;title&gt;小白技术博客&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">    &lt;script&gt;</span></span><br><span class="line"><span class="regexp">      window.onload = function () &#123;</span></span><br><span class="line"><span class="regexp">          /</span><span class="regexp">/1.获取a节点并添加click点击事件</span></span><br><span class="line"><span class="regexp">          document.getElementsByTagName("a")[0].onclick=function () &#123;</span></span><br><span class="line"><span class="regexp">              /</span><span class="regexp">/3.创建一个 XMLHttpRequest 对象</span></span><br><span class="line"><span class="regexp">              var request = new XMLHttpRequest();</span></span><br><span class="line"><span class="regexp">              /</span><span class="regexp">/4.准备发送请求的数据</span></span><br><span class="line"><span class="regexp">              var url = this.href;/</span><span class="regexp">/准备url路径</span></span><br><span class="line"><span class="regexp">              var method = "GET";/</span><span class="regexp">/准备请求方式（POST/</span>GET）</span><br><span class="line">              <span class="comment">//5.调用XMLHttpRequest对象的open方法</span></span><br><span class="line">              request.open(method,url);</span><br><span class="line">              <span class="comment">//6.调用XMLHttpRequest对象的send方法</span></span><br><span class="line">              request.send(<span class="literal">null</span>);<span class="comment">//发射请求</span></span><br><span class="line">              <span class="comment">//7.为XMLHttpRequest对象添加 onreadystatechange事件</span></span><br><span class="line">              request.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="comment">//HTTP状态改变响应事件</span></span><br><span class="line">                  alert(request.readyState);<span class="comment">//实时显示readyState的状态</span></span><br><span class="line">              <span class="comment">//8.判断readyState为 4 时响应完成</span></span><br><span class="line">                  <span class="keyword">if</span>(request.readyState==<span class="number">4</span>)&#123;</span><br><span class="line">              <span class="comment">//9.判断该响应是否可用 status为200 或 304 时，响应正确</span></span><br><span class="line">                      <span class="keyword">if</span>(request.status==<span class="number">200</span>||request.status==<span class="number">304</span>)</span><br><span class="line">              <span class="comment">//10.显示响应得到的数据            </span></span><br><span class="line">                          alert(request.responseText);</span><br><span class="line">                      &#125;</span><br><span class="line">                  &#125;</span><br><span class="line">              &#125;</span><br><span class="line">              <span class="comment">//2.取消默认行为</span></span><br><span class="line">              <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">     &lt;a href=<span class="string">"./hellow"</span>&gt;nihao&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>body&gt;</span><br><span class="line">&lt;<span class="regexp">/html&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/Myblog/page/2/">2</a><a class="extend next" rel="next" href="/Myblog/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/Myblog/page/2/">2</a><a class="page-number" href="/Myblog/page/3/">3</a><a class="extend next" rel="next" href="/Myblog/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -2103,7 +2240,7 @@ ListLength();返回线性表L中元素的个数
                 
                   <a href="/Myblog/archives">
                 
-                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2165,7 +2302,9 @@ ListLength();返回线性表L中元素的个数
                     
                       
                     
-                    <span class="site-state-item-count">15</span>
+                      
+                    
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2349,6 +2488,35 @@ ListLength();返回线性表L中元素的个数
 
 
   
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'zKT77AUHenxJ96eoJWP8LR7K-gzGzoHsz',
+    appKey: 'pIg36WYQzuKBChOyIJySyE93',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+</script>
+
+
 
 
 
