@@ -96,24 +96,27 @@
 
 
 
-  <meta name="description" content="name：连贺扬QQ：1017974981Wechat：a13781858874phone ： 13781858874school：henu">
+  <meta name="description" content="#Tarjan算法介绍一种由Robert Tarjan提出的求解有向图强连通分量的线性时间的算法。通过变形，其亦可以求解无向图问题桥：，割点：，连通分量：。 #适用问题：求解（有向图/无向图）的，桥，割点，环，回路等问题 #整体思想：如果我们欲要求解，桥的个数，割点的个数，环的数目，归根结底，是分析清楚一个图 有几个 环，每个环包含哪些节点，那些边。而 tarjan算法就是做的这件事情，通过dfs">
+<meta name="keywords" content="ACM_图论">
 <meta property="og:type" content="article">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/2019/04/05/about/index.html">
+<meta property="og:title" content="Tarjan算法详解">
+<meta property="og:url" content="http://yoursite.com/2019/04/08/Tarjan算法详解/index.html">
 <meta property="og:site_name" content="拼搏岁月">
-<meta property="og:description" content="name：连贺扬QQ：1017974981Wechat：a13781858874phone ： 13781858874school：henu">
+<meta property="og:description" content="#Tarjan算法介绍一种由Robert Tarjan提出的求解有向图强连通分量的线性时间的算法。通过变形，其亦可以求解无向图问题桥：，割点：，连通分量：。 #适用问题：求解（有向图/无向图）的，桥，割点，环，回路等问题 #整体思想：如果我们欲要求解，桥的个数，割点的个数，环的数目，归根结底，是分析清楚一个图 有几个 环，每个环包含哪些节点，那些边。而 tarjan算法就是做的这件事情，通过dfs">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-05T16:05:13.617Z">
+<meta property="og:image" content="http://yoursite.com/Myblog/2019/04/08/Tarjan算法详解/tarjan.png">
+<meta property="og:updated_time" content="2019-04-08T06:40:41.267Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="name：连贺扬QQ：1017974981Wechat：a13781858874phone ： 13781858874school：henu">
+<meta name="twitter:title" content="Tarjan算法详解">
+<meta name="twitter:description" content="#Tarjan算法介绍一种由Robert Tarjan提出的求解有向图强连通分量的线性时间的算法。通过变形，其亦可以求解无向图问题桥：，割点：，连通分量：。 #适用问题：求解（有向图/无向图）的，桥，割点，环，回路等问题 #整体思想：如果我们欲要求解，桥的个数，割点的个数，环的数目，归根结底，是分析清楚一个图 有几个 环，每个环包含哪些节点，那些边。而 tarjan算法就是做的这件事情，通过dfs">
+<meta name="twitter:image" content="http://yoursite.com/Myblog/2019/04/08/Tarjan算法详解/tarjan.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/05/about/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/08/Tarjan算法详解/">
 
 
 
@@ -123,7 +126,7 @@
   };
 </script>
 
-  <title>about | 拼搏岁月</title>
+  <title>Tarjan算法详解 | 拼搏岁月</title>
   
 
 
@@ -359,7 +362,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/04/05/about/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/04/08/Tarjan算法详解/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="连贺扬">
@@ -376,7 +379,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">about
+          <h1 class="post-title" itemprop="name headline">Tarjan算法详解
 
               
             
@@ -402,24 +405,12 @@
                 
               
 
-              <time title="创建时间：2019-04-05 23:59:38" itemprop="dateCreated datePublished" datetime="2019-04-05T23:59:38+08:00">2019-04-05</time>
+              <time title="创建时间：2019-04-08 14:32:48 / 修改时间：14:40:41" itemprop="dateCreated datePublished" datetime="2019-04-08T14:32:48+08:00">2019-04-08</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-06 00:05:13" itemprop="dateModified" datetime="2019-04-06T00:05:13+08:00">2019-04-06</time>
               
             
           </span>
@@ -436,7 +427,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/about/" itemprop="url" rel="index"><span itemprop="name">about</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/ACM算法/" itemprop="url" rel="index"><span itemprop="name">ACM算法</span></a></span>
 
                 
                 
@@ -454,8 +445,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
             
-                <a href="/Myblog/2019/04/05/about/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/04/05/about/" itemprop="commentCount"></span>
+                <a href="/Myblog/2019/04/08/Tarjan算法详解/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/04/08/Tarjan算法详解/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -490,7 +481,16 @@
       
 
       
-        <p>name：连贺扬<br>QQ：1017974981<br>Wechat：a13781858874<br>phone ： 13781858874<br>school：henu</p>
+        <p>#Tarjan算法介绍<br>一种由Robert Tarjan提出的求解有向图强连通分量的线性时间的算法。通过变形，其亦可以求解无向图问题<br>桥：，割点：，连通分量：。</p>
+<p>#适用问题：<br>求解（有向图/无向图）的，桥，割点，环，回路等问题</p>
+<p>#整体思想：<br>如果我们欲要求解，桥的个数，割点的个数，环的数目，归根结底，是分析清楚一个图 有几个 环，每个环包含哪些节点，那些边。而 tarjan算法就是做的这件事情，通过dfs遍历每一条边和节点，算出有几个环，每个环中有哪些节点。那么是如何做的呢，整体上我们可以这么理解。<br>首先定义两个 数组 dfn[i]  low[i]  分别代表 每个节点的代号  和 每个环的代号，还有一个分析的次序 cnt变量。然后我们用dfs 深度遍历每一个顶点，每遍历一个节点 cnt++，low[i]=dfn[i]=cnt 就是说，每个节点的代号代表它是第几个被我们分析的，同时low[i]=cnt 是说刚开始我们无法判断哪些节点能组成环，所以就初始化为每个节点自己是一个环，这个环的代号就是自己的代号。而当我们分析到一定程度后<br>发现，某些节点能组成一个环，再回溯，将这几个节点所属环代号改为一个统一的环代号。到最后，如果一个节点的环代号和自己的代号相等，说明他是一个割点，而如果不相等，则这个节点属于一个<br>环，并且通过环代号知道他是那个环。</p>
+<p>#详细步骤分解：<br><img src="/Myblog/2019/04/08/Tarjan算法详解/tarjan.png" title="图"><br>这里我们需要对一些变量重新定义其在代码中的含义，之前所说只是理解上的含义。<br>dfn[i]:节点 i dfs的次序<br>low[i]: 节点 i 所在环中 所有节点中最小的 dfn[i]。<br>vis[i]:这个节点是否被遍历过，遍历过为1，否则为0<br>cnt:遍历次数<br>a[60]:用来存储图的 vector。<br>假如我们从  节点1  开始遍历， low[1]=dfn[1]=cnt=1; 然后遍历他的下一个节点，如果下一个节点曾经遍历过，说明这里能形成一个环，如果没便利过，就接着往下遍历。下一个是 节点2</p>
+<p>　　low[2]=dfn[2]=cnt=2; 再下一个是 节点3  low[3]=dfn[3]=cnt=3 , 然后  low[4]=dfn[4]=cnt =4,直到 4 的下一个节点可以到 节点2 曾经便利过 ，因此节点2到节点4之间会有一个环，接着我们向后回溯</p>
+<p>　　使 low[4]=min(low[4],low[2])=2   low[3]=min(low[3],low[4])=2   low[2]=min(low[2],low[3])=2  low[1]=min(low[1],low[2])=1, 我们就会发现 节点2 ，节点3 ，节点4，的low与dfn就不一样了，且low都等于2，说明</p>
+<p>　　他们三个组成了一个环，然后接着向下遍历 节点5 ，没有被遍历过，所以low[5]=dfn[5]=cnt=5;</p>
+<p>　　至此 整体上 low[2]=low[3]=low[4]=2     low[1]=dfn[1]=1     low[5]=dfn[5]=5; 所以，这个图中有那几个群 ，群里有哪些节点，有哪些是割点，桥等 都一目了然了。</p>
+<p>　　下面是详细的代码</p>
+<p>　　求一个无向图的所有桥的个数，先输入两个数 n个节点，m条边。再输入 m对 数代表边的两个节点。<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a[<span class="number">60</span>];</span><br><span class="line"><span class="keyword">int</span> dfn[<span class="number">60</span>];</span><br><span class="line"><span class="keyword">int</span> low[<span class="number">60</span>];<span class="keyword">int</span> vis[<span class="number">60</span>];</span><br><span class="line"><span class="keyword">int</span> cnt=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> dig=<span class="number">0</span>;</span><br><span class="line"><span class="comment">//这里是tarjan代码模板核心</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">tarjan</span><span class="params">(<span class="keyword">int</span> w,<span class="keyword">int</span> u)</span></span>&#123;</span><br><span class="line">    vis[u]=<span class="number">1</span>;</span><br><span class="line">    low[u]=dfn[u]=(cnt++);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;a[u].size();i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> v = a[u][i];</span><br><span class="line">        <span class="keyword">if</span>(v==w) <span class="keyword">continue</span>;<span class="comment">//因为是无向图，防止向后返回去遍历</span></span><br><span class="line">        <span class="keyword">if</span>(vis[v]!=<span class="number">1</span>) tarjan(u,v);<span class="comment">//没有便利过，就接着向下遍历，直到找到后，再执行下面的代码，也就是回溯。</span></span><br><span class="line">        <span class="keyword">if</span>(vis[v]==<span class="number">1</span>) low[u]=min(low[u],low[v]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(low[u]==dfn[u])&#123;</span><br><span class="line">        dig++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">　　<span class="comment">//初始化函数</span></span><br><span class="line">    <span class="built_in">memset</span>(dfn,<span class="number">0</span>,<span class="keyword">sizeof</span> dfn);</span><br><span class="line">    <span class="built_in">memset</span>(low,<span class="number">0</span>,<span class="keyword">sizeof</span> low);</span><br><span class="line">    <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span> vis);</span><br><span class="line">    <span class="built_in">memset</span>(sp,<span class="number">0</span>,<span class="keyword">sizeof</span> sp);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    init();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> k1,k2;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;k1&gt;&gt;k2;</span><br><span class="line">        a[k1].push_back(k2);</span><br><span class="line">        a[k2].push_back(k1);</span><br><span class="line">    &#125;</span><br><span class="line">    tarjan(<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;dig<span class="number">-1</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -512,6 +512,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/Myblog/tags/ACM-图论/" rel="tag"># ACM_图论</a>
+          
+        </div>
+      
 
       
       
@@ -521,8 +527,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Myblog/2019/04/05/解题报告-CFRound487C/" rel="next" title="解题报告-CFRound487C">
-                <i class="fa fa-chevron-left"></i> 解题报告-CFRound487C
+              <a href="/Myblog/2019/04/05/about/" rel="next" title="about">
+                <i class="fa fa-chevron-left"></i> about
               </a>
             
           </div>
@@ -530,10 +536,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Myblog/2019/04/08/Tarjan算法详解/" rel="prev" title="Tarjan算法详解">
-                Tarjan算法详解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
