@@ -359,6 +359,184 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/04/11/最小生成树问题/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="连贺扬">
+      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
+      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拼搏岁月">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Myblog/2019/04/11/最小生成树问题/" class="post-title-link" itemprop="url">最小生成树问题</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-11 11:23:54 / 修改时间：11:44:07" itemprop="dateCreated datePublished" datetime="2019-04-11T11:23:54+08:00">2019-04-11</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/ACM算法/" itemprop="url" rel="index"><span itemprop="name">ACM算法</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/Myblog/2019/04/11/最小生成树问题/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/04/11/最小生成树问题/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#前言<br>最小生生成树问题描述：边权和最小的生成树<br><figure class="highlight plain"><figcaption><span>点击左侧link跳转</span><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1863" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">应用实例</span><br></pre></td></tr></table></figure></p>
+<p>#解决方法：</p>
+<p>##1.Kruskal(克鲁斯卡尔)算法</p>
+<p>算法思想：<br>先将所有边，按照边权从小到大排序，然后从最小的开始，一个一个判断，如果这个边加入生成树中，没有构成回路，<br>就符合，将边加入生成树，如果形成了回路，就跳过，判断下一个。那么，应该如何来判断是否形成了回路呢？这里可以用并查集<br>findf的方法，如果新边的两个节点，属于同一个祖先，则他们就在生成树中，则这个边必定会形成回路，所以舍弃，如果祖先不同，<br>就将一个节点的父节点设为另一个节点，就将边加入到了树中。</p>
+<figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N =<span class="number">10000</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> M =<span class="number">110</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> u;</span><br><span class="line">    <span class="keyword">int</span> v;</span><br><span class="line">    <span class="keyword">int</span> w;</span><br><span class="line">&#125; ;</span><br><span class="line">node a[N];</span><br><span class="line"><span class="keyword">int</span> f[M];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(node a,node b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.w&lt;b.w;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findf</span><span class="params">(<span class="keyword">int</span> u)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(f[u]==<span class="number">-1</span>) <span class="keyword">return</span> u;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> f[u]=findf(f[u]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Kruskal</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m)</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(f,<span class="number">-1</span>,<span class="keyword">sizeof</span> f);</span><br><span class="line">    sort(a,a+n,cmp);</span><br><span class="line">    <span class="keyword">int</span> res =<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> x1 = a[i].u;</span><br><span class="line">        <span class="keyword">int</span> x2 = a[i].v;</span><br><span class="line">        <span class="keyword">int</span> fx1 = findf(x1);</span><br><span class="line">        <span class="keyword">int</span> fx2 = findf(x2);</span><br><span class="line">        <span class="keyword">if</span>(fx1 != fx2 || (fx1==<span class="number">-1</span>&amp;&amp;fx2==<span class="number">-1</span>))&#123;</span><br><span class="line">            f[fx2] = fx1;</span><br><span class="line">            cnt++;</span><br><span class="line">            res += a[i].w;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(cnt == m<span class="number">-1</span>)&#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(cnt&lt; m<span class="number">-1</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a[i].u;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a[i].v;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a[i].w;</span><br><span class="line">        &#125;</span><br><span class="line">       <span class="keyword">int</span> ans= Kruskal(n,m);</span><br><span class="line">        <span class="keyword">if</span>(ans == <span class="number">-1</span>) <span class="built_in">cout</span>&lt;&lt;<span class="string">"?"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>##2.prim(普里姆)算法</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/04/08/Tarjan算法详解/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1865,7 +2043,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-23 16:59:32" itemprop="dateModified" datetime="2019-03-23T16:59:32+08:00">2019-03-23</time>
+                <time title="修改时间：2019-04-12 19:58:28" itemprop="dateModified" datetime="2019-04-12T19:58:28+08:00">2019-04-12</time>
               
             
           </span>
@@ -1933,188 +2111,10 @@
           
             <h1 id="0-1背包"><a href="#0-1背包" class="headerlink" title="0-1背包"></a>0-1背包</h1><p>0-1背包描述的是这么一个问题，你有一个背包最大能负重 m吗，现在有 n 个物品每个物品 i  都有与之对应的 价值 v[i]  和重量 w[i]<br>问：在物体的重量和不超过你的负重m的情况下，能装的最大价值的物品价值和是多少？这就是典型的0-1背包问题</p>
 <p>解题思路：运用dp的思想，对于一个新的物品，只用判断在原来的基础上 选 还是 不选这两种状态。<br>设 f[i][j] 表示 第 i个 物品  剩余负重为 j 的状态下的最大价值和。v[i] 第i个物品的价值。w[i]第i个物品的重量<br>状态转移方程为  f[i][j] = max(f[i-1][j],f[i-1][j-w[i]]+v[i])</p>
-<figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//朴素解法</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N =<span class="number">50000</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">30</span>][N];</span><br><span class="line"><span class="keyword">int</span> c[<span class="number">30</span>];</span><br><span class="line"><span class="keyword">int</span> w[<span class="number">30</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m,n;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;m&gt;&gt;n)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="keyword">int</span> x,y;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">			w[i]=x;</span><br><span class="line">			c[i]=y;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = m;j&gt;=w[i];j--)&#123;		</span><br><span class="line">                f[<span class="number">30</span>][j]=max(f[i<span class="number">-1</span>][j],f[i<span class="number">-1</span>][j-w[i]]+c[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;f[n][m]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N =<span class="number">50000</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> f[N];</span><br><span class="line"><span class="keyword">int</span> c[<span class="number">30</span>];</span><br><span class="line"><span class="keyword">int</span> w[<span class="number">30</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m,n;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;m&gt;&gt;n)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="keyword">int</span> x,y;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">			w[i]=x;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			c[i]=y;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = m;j&gt;=w[i];j--)&#123;		</span><br><span class="line">                f[j]=max(f[j],f[j-w[i]]+c[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;f[m]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="完全背包"><a href="#完全背包" class="headerlink" title="完全背包"></a>完全背包</h1><p>完全背包问题与0-1背包相比，0-1背包的物品i  只有一个，放了之后就没了。而完全背包，每个物品 i 都可以无限次放入<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N =<span class="number">50000</span>+<span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> f[N];</span><br><span class="line"><span class="keyword">int</span> c[<span class="number">30</span>];</span><br><span class="line"><span class="keyword">int</span> w[<span class="number">30</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m,n;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;m&gt;&gt;n)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="keyword">int</span> x,y;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">			w[i]=x;</span><br><span class="line">			c[i]=y;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = w[i];j&lt;=m;j++)&#123;		<span class="comment">//与0-1 背包相比，唯一的区别就在这里，是顺序遍历</span></span><br><span class="line">                f[j]=max(f[j],f[j-w[i]]+c[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;f[m]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="多重背包"><a href="#多重背包" class="headerlink" title="多重背包"></a>多重背包</h1><p>多重背包 和 完全背包相比而言，区别就在，完全背包，每个物品 i 可以无限次放入，而多重背包，每个物品i 最多放入s[i]次。<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N =<span class="number">50000</span>+<span class="number">10</span>;</span><br><span class="line"><span class="comment">/* run this program using the console pauser or add your own getch, system("pause") or input loop */</span></span><br><span class="line"><span class="keyword">int</span> f[N];</span><br><span class="line"><span class="keyword">int</span> c[<span class="number">30</span>];</span><br><span class="line"><span class="keyword">int</span> w[<span class="number">30</span>]; </span><br><span class="line"><span class="keyword">int</span> s[i];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m,n;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;m&gt;&gt;n)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;w[i]&gt;&gt;c[i]&gt;&gt;s[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = w[i];j&lt;=m;j++)&#123;	</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> k =<span class="number">0</span>;k&lt;s[i];k++)&#123;</span><br><span class="line">					<span class="keyword">if</span>(j-k*w[i]&lt;<span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">					f[j]=max(f[j],f[j-k*w[i]]+k*c[i]);</span><br><span class="line">				&#125;	</span><br><span class="line">                </span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;f[m]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N =<span class="number">50000</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> f[N];<span class="comment">//在负重为 i 的情况下，能得到的最大价值f[i];</span></span><br><span class="line"><span class="keyword">int</span> v[<span class="number">30</span>];<span class="comment">//每个物品 i 的价值v[i]; </span></span><br><span class="line"><span class="keyword">int</span> w[<span class="number">30</span>];<span class="comment">//每个物品 i 的重量w[i];</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m,n;<span class="comment">//最大负重m，n个物品</span></span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;m&gt;&gt;n)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;w[i]&gt;&gt;v[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = m;j&gt;=w[i];j--)&#123;<span class="comment">//这里将二维数组模式优化为了一维，同时注意这里是逆序</span></span><br><span class="line">                f[j]=max(f[j],f[j-w[i]]+v[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;f[m]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="完全背包"><a href="#完全背包" class="headerlink" title="完全背包"></a>完全背包</h1><p>完全背包问题与0-1背包相比，0-1背包的物品i  只有一个，放了之后就没了。而完全背包，每个物品 i 都可以无限次放入<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N =<span class="number">50000</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> f[N];<span class="comment">//在负重为 i 的情况下，能得到的最大价值f[i];</span></span><br><span class="line"><span class="keyword">int</span> v[<span class="number">30</span>];<span class="comment">//每个物品 i 的价值v[i];</span></span><br><span class="line"><span class="keyword">int</span> w[<span class="number">30</span>];<span class="comment">//每个物品 i 的重量w[i];</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m,n;<span class="comment">//最大负重m，n个物品</span></span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;m&gt;&gt;n)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;w[i]&gt;&gt;v[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = w[i];j&lt;=m;j++)&#123;		<span class="comment">//与0-1 背包相比，唯一的区别就在这里，是顺序遍历</span></span><br><span class="line">                f[j]=max(f[j],f[j-w[i]]+v[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;f[m]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h1 id="多重背包"><a href="#多重背包" class="headerlink" title="多重背包"></a>多重背包</h1><p>多重背包 和 完全背包相比而言，区别就在，完全背包，每个物品 i 可以无限次放入，而多重背包，每个物品i 最多放入s[i]次。<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N =<span class="number">50000</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> f[N];<span class="comment">//在负重为 i 的情况下，能得到的最大价值f[i];</span></span><br><span class="line"><span class="keyword">int</span> v[<span class="number">30</span>];<span class="comment">//物品 i 的价值v[i];</span></span><br><span class="line"><span class="keyword">int</span> w[<span class="number">30</span>];<span class="comment">//物品 i 的重量w[i];</span></span><br><span class="line"><span class="keyword">int</span> s[<span class="number">30</span>];<span class="comment">//物品 i 最多放s[i]次</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m,n;<span class="comment">//最大负重m，n个物品</span></span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;m&gt;&gt;n)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;w[i]&gt;&gt;v[i]&gt;&gt;s[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = w[i];j&lt;=m;j++)&#123;</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> k =<span class="number">0</span>;k&lt;s[i];k++)&#123;</span><br><span class="line">					<span class="keyword">if</span>(j-k*w[i]&lt;<span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">					f[j]=max(f[j],f[j-k*w[i]]+k*v[i]);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;f[m]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
 
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/03/07/jsp学习记录/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="连贺扬">
-      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
-      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="拼搏岁月">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Myblog/2019/03/07/jsp学习记录/" class="post-title-link" itemprop="url">jsp学习记录</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-03-07 23:03:20 / 修改时间：23:08:23" itemprop="dateCreated datePublished" datetime="2019-03-07T23:03:20+08:00">2019-03-07</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/javaWeb/" itemprop="url" rel="index"><span itemprop="name">javaWeb</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <a href="/Myblog/2019/03/07/jsp学习记录/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/03/07/jsp学习记录/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <img src="/Myblog/2019/03/07/jsp学习记录/jsp1.png" title="jsp学习记录">
-<img src="/Myblog/2019/03/07/jsp学习记录/jsp2.png" title="jsp学习记录">
-<img src="/Myblog/2019/03/07/jsp学习记录/jsp3.png" title="jsp学习记录">
-<img src="/Myblog/2019/03/07/jsp学习记录/jsp4.png" title="jsp学习记录">
-<img src="/Myblog/2019/03/07/jsp学习记录/jsp5.png" title="jsp学习记录">
-<img src="/Myblog/2019/03/07/jsp学习记录/jsp6.png" title="jsp学习记录">
           
         
       
@@ -2204,7 +2204,7 @@
                 
                   <a href="/Myblog/archives">
                 
-                    <span class="site-state-item-count">24</span>
+                    <span class="site-state-item-count">25</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
