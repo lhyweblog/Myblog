@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="并查集的应用十分广泛，包括一些算法，当应用上并查集的时候，也会更容易实现。下面总结下并查集的相关内容。  并查集的概念？个人的理解是：并查集是一种用于存储集合类型的数据的数据结构，通过该数据结构，能够实现三个基本的操作：1.将两个不同的集合合并（并）2.查询元素所属集合（查）3.计算得到集合的一些属性如：该数据分得集合的个数，每个集合多少元素（集） 标准定义在一些应用问题中，需要将n个不同的元素划">
-<meta name="keywords" content="ACM_图论">
+  <meta name="description" content="算法思想与实现求解LCS问题，运用的是dp动态规划思想。我们用Ax表示序列A的连续前x项构成的子序列，即Ax= a1,a2,……ax, By= b1,b2,……by, 我们用LCS(x, y)表示它们的最长公共子序列长度，那原问题等价于求LCS(m,n)。为了方便我们用L(x, y)表示Ax和By的一个最长公共子序列。让我们来看看如何求LCS(x, y)。我们令x表示子序列考虑最后一项 （1） A">
+<meta name="keywords" content="LCS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="并查集的理解和代码实现">
-<meta property="og:url" content="http://yoursite.com/2019/02/08/并查集的理解和代码实现/index.html">
+<meta property="og:title" content="最长公共子序列">
+<meta property="og:url" content="http://yoursite.com/2019/04/14/最长公共子序列lcs/index.html">
 <meta property="og:site_name" content="拼搏岁月">
-<meta property="og:description" content="并查集的应用十分广泛，包括一些算法，当应用上并查集的时候，也会更容易实现。下面总结下并查集的相关内容。  并查集的概念？个人的理解是：并查集是一种用于存储集合类型的数据的数据结构，通过该数据结构，能够实现三个基本的操作：1.将两个不同的集合合并（并）2.查询元素所属集合（查）3.计算得到集合的一些属性如：该数据分得集合的个数，每个集合多少元素（集） 标准定义在一些应用问题中，需要将n个不同的元素划">
+<meta property="og:description" content="算法思想与实现求解LCS问题，运用的是dp动态规划思想。我们用Ax表示序列A的连续前x项构成的子序列，即Ax= a1,a2,……ax, By= b1,b2,……by, 我们用LCS(x, y)表示它们的最长公共子序列长度，那原问题等价于求LCS(m,n)。为了方便我们用L(x, y)表示Ax和By的一个最长公共子序列。让我们来看看如何求LCS(x, y)。我们令x表示子序列考虑最后一项 （1） A">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-08T06:19:56.421Z">
+<meta property="og:updated_time" content="2019-04-16T03:54:02.260Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="并查集的理解和代码实现">
-<meta name="twitter:description" content="并查集的应用十分广泛，包括一些算法，当应用上并查集的时候，也会更容易实现。下面总结下并查集的相关内容。  并查集的概念？个人的理解是：并查集是一种用于存储集合类型的数据的数据结构，通过该数据结构，能够实现三个基本的操作：1.将两个不同的集合合并（并）2.查询元素所属集合（查）3.计算得到集合的一些属性如：该数据分得集合的个数，每个集合多少元素（集） 标准定义在一些应用问题中，需要将n个不同的元素划">
+<meta name="twitter:title" content="最长公共子序列">
+<meta name="twitter:description" content="算法思想与实现求解LCS问题，运用的是dp动态规划思想。我们用Ax表示序列A的连续前x项构成的子序列，即Ax= a1,a2,……ax, By= b1,b2,……by, 我们用LCS(x, y)表示它们的最长公共子序列长度，那原问题等价于求LCS(m,n)。为了方便我们用L(x, y)表示Ax和By的一个最长公共子序列。让我们来看看如何求LCS(x, y)。我们令x表示子序列考虑最后一项 （1） A">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/08/并查集的理解和代码实现/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/14/最长公共子序列lcs/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>并查集的理解和代码实现 | 拼搏岁月</title>
+  <title>最长公共子序列 | 拼搏岁月</title>
   
 
 
@@ -360,7 +360,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/02/08/并查集的理解和代码实现/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/04/14/最长公共子序列lcs/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="连贺扬">
@@ -377,7 +377,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">并查集的理解和代码实现
+          <h1 class="post-title" itemprop="name headline">最长公共子序列
 
               
             
@@ -403,12 +403,24 @@
                 
               
 
-              <time title="创建时间：2019-02-08 12:47:40 / 修改时间：14:19:56" itemprop="dateCreated datePublished" datetime="2019-02-08T12:47:40+08:00">2019-02-08</time>
+              <time title="创建时间：2019-04-14 11:41:52" itemprop="dateCreated datePublished" datetime="2019-04-14T11:41:52+08:00">2019-04-14</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-16 11:54:02" itemprop="dateModified" datetime="2019-04-16T11:54:02+08:00">2019-04-16</time>
               
             
           </span>
@@ -443,8 +455,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
             
-                <a href="/Myblog/2019/02/08/并查集的理解和代码实现/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/02/08/并查集的理解和代码实现/" itemprop="commentCount"></span>
+                <a href="/Myblog/2019/04/14/最长公共子序列lcs/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/04/14/最长公共子序列lcs/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -479,13 +491,28 @@
       
 
       
-        <p>并查集的应用十分广泛，包括一些算法，当应用上并查集的时候，也会更容易实现。下面总结下并查集的相关内容。 </p>
-<h1 id="并查集的概念？"><a href="#并查集的概念？" class="headerlink" title="并查集的概念？"></a>并查集的概念？</h1><h2 id="个人的理解是："><a href="#个人的理解是：" class="headerlink" title="个人的理解是："></a>个人的理解是：</h2><p>并查集是一种用于存储集合类型的数据的数据结构，通过该数据结构，能够实现三个基本的操作：1.将两个不同的集合合并（并）2.查询元素所属集合（查）3.计算得到集合的一些属性如：该数据分得集合的个数，每个集合多少元素（集）</p>
-<h2 id="标准定义"><a href="#标准定义" class="headerlink" title="标准定义"></a>标准定义</h2><p>在一些应用问题中，需要将n个不同的元素划分成一组不相交的集合。开始时每个元素自成一个单元素集合，然后按照一定规律将归于同一组元素的集合合并，在此过程中需要反复查询某个元素归属于哪个集合的运算，适合于描述这类问题的抽象数据类型称为并查集（union-find set）。 </p>
-<h2 id="并查集的应用范围"><a href="#并查集的应用范围" class="headerlink" title="并查集的应用范围"></a>并查集的应用范围</h2><p>求解：图的连通块个数，数据的集合分类，树问题等。</p>
-<h1 id="并查集的思想"><a href="#并查集的思想" class="headerlink" title="并查集的思想"></a>并查集的思想</h1><p>并查集本质是通过森林和树的思想来实现的。每个集合都是一棵树，所有的集合放在一起就构成了森林。每个集合的元素是树的节点，集合的特征元素（相当于集合的id）是树的根节点。这样就实现了数据的基本存储。<br>那么如何实现三个功能：并，查，集 呢？</p>
-<h2 id="具体步骤如下："><a href="#具体步骤如下：" class="headerlink" title="具体步骤如下："></a>具体步骤如下：</h2><p>1.初始化：首先将每个元素都初始化为一个集合，也就是一棵树，根节点就是自己<br>2.合并：根据题意或者要求将不用的元素合并，就是将一个树的根节点接在另一个树下就形成了一棵树，就完成了合并<br>3.查询：只要查询一个元素所在树的根节点是什么，就知道他所在哪个集合<br>4.集合属性和个数：森林中有几颗树（及多少个根节点），就知道有多少集合。统计一个树中有多少节点，就知道一个集合有多少元素</p>
-<h1 id="并查集的代码实现"><a href="#并查集的代码实现" class="headerlink" title="并查集的代码实现"></a>并查集的代码实现</h1><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> fa[N]; <span class="comment">//fa[i] 表示i的baba，</span></span><br><span class="line"><span class="keyword">int</span> n,m;<span class="comment">//n表示节点数，即元素个数，m表示有各个元素间有m对联系。</span></span><br><span class="line">Int ans=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)<span class="comment">//初始化，将各个元素的祖先初始化为自己。</span></span><br><span class="line">    &#123;</span><br><span class="line">        fa[i]=i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find_set</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(fa[x]!=x)</span><br><span class="line">        fa[x]=find_set(fa[x]);<span class="comment">//如果这个baba不是这个集合的祖先，就查找baba的baba，直到找到这个集合的祖先，因为只有祖先满足f[x]==x，即baba是自己。这里每次查询让fa[x]=他的爸爸为了最后让所有的元素的爸爸直接=祖先，下次查找祖先速度就快很多了。</span></span><br><span class="line">    <span class="keyword">return</span> fa[x];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">union_set</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    x=find_set(x);<span class="comment">//找到x的祖先。</span></span><br><span class="line">    y=find_set(y); <span class="comment">//找到y的祖先。</span></span><br><span class="line">    <span class="comment">//也就是他们所在的集合。</span></span><br><span class="line">	<span class="keyword">if</span>(x!=y)<span class="comment">//如果不在一个集合中。</span></span><br><span class="line">    &#123;</span><br><span class="line">	 	f[x]=y;<span class="comment">//就让y成为x的baba，将两个集合合并。</span></span><br><span class="line">    &#125;</span><br><span class="line">    Else</span><br><span class="line">    &#123;</span><br><span class="line">        Ans++;<span class="comment">//计算成环的个数</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">count_sets</span><span class="params">(<span class="keyword">int</span> n)</span><span class="comment">//辅助函数，求集合数，思想就是遍历每个元素，如果他的baba是他本身，那么他就是祖先，即一个集合</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		<span class="keyword">if</span> (find_set(i) == i)</span><br><span class="line">			cnt++;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> cnt<span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="算法思想与实现"><a href="#算法思想与实现" class="headerlink" title="算法思想与实现"></a>算法思想与实现</h1><p>求解LCS问题，运用的是dp动态规划思想。<br>我们用Ax表示序列A的连续前x项构成的子序列，即Ax= a1,a2,……ax, By= b1,b2,……by, 我们用LCS(x, y)表示它们的最长公共子序列长度，那原问题等价于求LCS(m,n)。为了方便我们用L(x, y)表示Ax和By的一个最长公共子序列。让我们来看看如何求LCS(x, y)。我们令x表示子序列考虑最后一项</p>
+<p>（1） Ax ＝ By</p>
+<pre><code>  那么它们L(Ax, By)的最后一项一定是这个元素！
+
+为什么呢？为了方便，我们令t = Ax = By, 我们用反证法：假设L(x,y)最后一项不是t，则要么L(x,y)为空序列（别忘了这个），要么L(x,y)的最后一项是Aa＝Bb ≠ t, 且显然有a &lt; x, b &lt; y。无论是哪种情况我们都可以把t接到这个L(x,y)后面,从而得到一个更长的公共子序列。矛盾！
+如果我们从序列Ax中删掉最后一项ax得到Ax-1,从序列By中也删掉最后一项by得到By-1，(多说一句角标为0时，认为子序列是空序列)，则我们从L(x,y)也删掉最后一项t得到的序列是L(x – 1, y - 1)。为什么呢？和上面的道理相同，如果得到的序列不是L(x - 1, y - 1)，则它一定比L(x - 1, y - 1)短（注意L（，）是个集合！），那么它后面接上元素t得到的子序列L(x,y)也比L(x - 1, y - 1)接上元素t得到的子序列短，这与L(x, y)是最长公共子序列矛盾。因此L(x, y) = L(x - 1, y - 1) 最后接上元素t，LCS(Ax, By) = LCS(x - 1, y - 1) + 1。
+</code></pre><p>（2）  Ax ≠ By</p>
+<pre><code>仍然设t = L(Ax, By), 或者L(Ax, By)是空序列（这时t是未定义值不等于任何值）。则t  ≠ Ax和t  ≠ By至少有一个成立，因为t不能同时等于两个不同的值嘛！
+</code></pre><p>（2.1）如果t  ≠ Ax，则有L(x, y)= L(x - 1, y)，因为根本没Ax的事嘛。</p>
+<pre><code>LCS(x,y) = LCS(x – 1, y)
+</code></pre><p>（2.2）如果t  ≠ By,l类似L(x, y)= L(x , y - 1)</p>
+<pre><code>     LCS(x,y) = LCS(x, y – 1)
+可是，我们事先并不知道t，由定义，我们取最大的一个，因此这种情况下,有LCS(x,y) = max(LCS(x – 1, y) , LCS(x, y – 1))。看看目前我们已经得到了什么结论：
+</code></pre><p>LCS(x,y) =<br>(1) LCS(x - 1,y - 1) + 1      （Ax ＝ By）<br>(2) max(LCS(x – 1, y) , LCS(x, y – 1))    （Ax ≠ By）</p>
+<p>这时一个显然的递推式，光有递推可不行，初值是什么呢？显然，一个空序列和任何序列的最长公共子序列都是空序列！所以我们有:</p>
+<p>LCS(x,y) =<br>(1) LCS(x - 1,y - 1) + 1 如果Ax ＝ By<br>(2) max(LCS(x – 1, y) , LCS(x, y – 1)) 如果Ax ≠ By<br>(3) 0 如果x = 0或者y = 0</p>
+<p>到此我们求出了计算最长公共子序列长度的递推公式。我们实际上计算了一个(n + 1)行(m + 1)列的表格（行是0..n，列是0..m)，也就这个二维度数组LCS(,)。<br>伪代码如下：<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> x = <span class="number">0</span> to n <span class="keyword">do</span></span><br><span class="line">    <span class="keyword">for</span> y = <span class="number">0</span> to m <span class="keyword">do</span></span><br><span class="line">        <span class="keyword">if</span> (x == <span class="number">0</span> || y == <span class="number">0</span>) then </span><br><span class="line">            LCS(x, y) = <span class="number">0</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (Ax == By) then</span><br><span class="line">            LCS(x, y) =  LCS(x - <span class="number">1</span>,y - <span class="number">1</span>) + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span> </span><br><span class="line">            LCS(x, y) = ) max(LCS(x – <span class="number">1</span>, y) , LCS(x, y – <span class="number">1</span>))</span><br><span class="line">        endif</span><br><span class="line">    endfor</span><br><span class="line">endfor</span><br></pre></td></tr></table></figure></p>
+<h1 id="例题与变形"><a href="#例题与变形" class="headerlink" title="例题与变形"></a>例题与变形</h1><figure class="highlight plain"><figcaption><span>点击左侧link跳转</span><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1159" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原题连接</span><br></pre></td></tr></table></figure>
+<p>题意：单纯得模板题</p>
+<p>思路：直接套模板<br>AC代码如下：<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> <span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1000</span>;</span><br><span class="line"><span class="keyword">int</span> l[N][N];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> a,b;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=a.length();i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j =<span class="number">0</span>;j&lt;=b.length();j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i==<span class="number">0</span>||j==<span class="number">0</span>)&#123;</span><br><span class="line">                    l[i][j]=<span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(a[i<span class="number">-1</span>] == b[j<span class="number">-1</span>])&#123;</span><br><span class="line">                    l[i][j] = l[i<span class="number">-1</span>][j<span class="number">-1</span>]+<span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    l[i][j] = max(l[i<span class="number">-1</span>][j],l[i][j<span class="number">-1</span>]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;l[a.length()][b.length()]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><figcaption><span>点击左侧link跳转</span><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1503" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原题连接</span><br></pre></td></tr></table></figure><br>题意：看原题，很清楚的</p>
+<p>思路：敬请期待<br>AC代码如下：<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -508,7 +535,7 @@
       
         <div class="post-tags">
           
-            <a href="/Myblog/tags/ACM-图论/" rel="tag"># ACM_图论</a>
+            <a href="/Myblog/tags/LCS/" rel="tag"># LCS</a>
           
         </div>
       
@@ -521,8 +548,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Myblog/2019/02/02/myfirst/" rel="next" title="myfirst">
-                <i class="fa fa-chevron-left"></i> myfirst
+              <a href="/Myblog/2019/04/14/最长上升下降子序列/" rel="next" title="最长上升下降子序列">
+                <i class="fa fa-chevron-left"></i> 最长上升下降子序列
               </a>
             
           </div>
@@ -530,10 +557,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Myblog/2019/02/08/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -717,7 +740,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#并查集的概念？"><span class="nav-number">1.</span> <span class="nav-text">并查集的概念？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#个人的理解是："><span class="nav-number">1.1.</span> <span class="nav-text">个人的理解是：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标准定义"><span class="nav-number">1.2.</span> <span class="nav-text">标准定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#并查集的应用范围"><span class="nav-number">1.3.</span> <span class="nav-text">并查集的应用范围</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#并查集的思想"><span class="nav-number">2.</span> <span class="nav-text">并查集的思想</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#具体步骤如下："><span class="nav-number">2.1.</span> <span class="nav-text">具体步骤如下：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#并查集的代码实现"><span class="nav-number">3.</span> <span class="nav-text">并查集的代码实现</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#算法思想与实现"><span class="nav-number">1.</span> <span class="nav-text">算法思想与实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#例题与变形"><span class="nav-number">2.</span> <span class="nav-text">例题与变形</span></a></li></ol></div>
             
 
           </div>
