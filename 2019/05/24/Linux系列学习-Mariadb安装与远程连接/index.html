@@ -96,28 +96,29 @@
 
 
 
-  <meta name="description" content="什么是Ajax？Ajax 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。 Ajax的全称是Asynchronous JavaScript and XML，即异步JavaScript+XML。它并不是新的编程语言，而是几种原有技术的结合体。通俗的讲呢，我个人的理解是，Ajax就是一种获取和发送数据，客户端与服务器端交互的手段，主要用于前后台的数据交互，数据获取，界面数据异步更新等它由">
-<meta name="keywords" content="Ajax">
+  <meta name="description" content="安装Mariadbyum安装这里我们使用 yum 直接安装就好，非常简单 敲入命令即可yum -y install mariadb mariadb-server 基础配置1.完成安装后，首先就是启动Mariadb服务 和 设置开机自启systemctl start mariadb   //设置启动systemctl enable mariadb  //设置开机自启 2.然后进行Mariadb的相关">
+<meta name="keywords" content="Linux系列学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ajax详解(1)--初识Ajax">
-<meta property="og:url" content="http://yoursite.com/2019/02/21/Ajax详解-1-初识Ajax/index.html">
+<meta property="og:title" content="Linux系列学习--Mariadb安装与远程连接">
+<meta property="og:url" content="http://yoursite.com/2019/05/24/Linux系列学习-Mariadb安装与远程连接/index.html">
 <meta property="og:site_name" content="拼搏岁月">
-<meta property="og:description" content="什么是Ajax？Ajax 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。 Ajax的全称是Asynchronous JavaScript and XML，即异步JavaScript+XML。它并不是新的编程语言，而是几种原有技术的结合体。通俗的讲呢，我个人的理解是，Ajax就是一种获取和发送数据，客户端与服务器端交互的手段，主要用于前后台的数据交互，数据获取，界面数据异步更新等它由">
+<meta property="og:description" content="安装Mariadbyum安装这里我们使用 yum 直接安装就好，非常简单 敲入命令即可yum -y install mariadb mariadb-server 基础配置1.完成安装后，首先就是启动Mariadb服务 和 设置开机自启systemctl start mariadb   //设置启动systemctl enable mariadb  //设置开机自启 2.然后进行Mariadb的相关">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/Myblog/2019/02/21/Ajax详解-1-初识Ajax/p1.png">
-<meta property="og:image" content="http://yoursite.com/Myblog/2019/02/21/Ajax详解-1-初识Ajax/p2.png">
-<meta property="og:updated_time" content="2019-02-21T13:34:07.004Z">
+<meta property="og:image" content="http://yoursite.com/Myblog/2019/05/24/Linux系列学习-Mariadb安装与远程连接/p1.png">
+<meta property="og:image" content="http://yoursite.com/Myblog/2019/05/24/Linux系列学习-Mariadb安装与远程连接/p2.png">
+<meta property="og:image" content="http://yoursite.com/Myblog/2019/05/24/Linux系列学习-Mariadb安装与远程连接/p3.png">
+<meta property="og:updated_time" content="2019-05-24T05:08:46.862Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ajax详解(1)--初识Ajax">
-<meta name="twitter:description" content="什么是Ajax？Ajax 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。 Ajax的全称是Asynchronous JavaScript and XML，即异步JavaScript+XML。它并不是新的编程语言，而是几种原有技术的结合体。通俗的讲呢，我个人的理解是，Ajax就是一种获取和发送数据，客户端与服务器端交互的手段，主要用于前后台的数据交互，数据获取，界面数据异步更新等它由">
-<meta name="twitter:image" content="http://yoursite.com/Myblog/2019/02/21/Ajax详解-1-初识Ajax/p1.png">
+<meta name="twitter:title" content="Linux系列学习--Mariadb安装与远程连接">
+<meta name="twitter:description" content="安装Mariadbyum安装这里我们使用 yum 直接安装就好，非常简单 敲入命令即可yum -y install mariadb mariadb-server 基础配置1.完成安装后，首先就是启动Mariadb服务 和 设置开机自启systemctl start mariadb   //设置启动systemctl enable mariadb  //设置开机自启 2.然后进行Mariadb的相关">
+<meta name="twitter:image" content="http://yoursite.com/Myblog/2019/05/24/Linux系列学习-Mariadb安装与远程连接/p1.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/21/Ajax详解-1-初识Ajax/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/24/Linux系列学习-Mariadb安装与远程连接/">
 
 
 
@@ -127,7 +128,7 @@
   };
 </script>
 
-  <title>Ajax详解(1)--初识Ajax | 拼搏岁月</title>
+  <title>Linux系列学习--Mariadb安装与远程连接 | 拼搏岁月</title>
   
 
 
@@ -363,7 +364,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/02/21/Ajax详解-1-初识Ajax/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/05/24/Linux系列学习-Mariadb安装与远程连接/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="连贺扬">
@@ -380,7 +381,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Ajax详解(1)--初识Ajax
+          <h1 class="post-title" itemprop="name headline">Linux系列学习--Mariadb安装与远程连接
 
               
             
@@ -406,7 +407,7 @@
                 
               
 
-              <time title="创建时间：2019-02-21 18:53:05 / 修改时间：21:34:07" itemprop="dateCreated datePublished" datetime="2019-02-21T18:53:05+08:00">2019-02-21</time>
+              <time title="创建时间：2019-05-24 00:10:44 / 修改时间：13:08:46" itemprop="dateCreated datePublished" datetime="2019-05-24T00:10:44+08:00">2019-05-24</time>
             
 
             
@@ -446,8 +447,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
             
-                <a href="/Myblog/2019/02/21/Ajax详解-1-初识Ajax/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/02/21/Ajax详解-1-初识Ajax/" itemprop="commentCount"></span>
+                <a href="/Myblog/2019/05/24/Linux系列学习-Mariadb安装与远程连接/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/05/24/Linux系列学习-Mariadb安装与远程连接/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -482,12 +483,28 @@
       
 
       
-        <h1 id="什么是Ajax？"><a href="#什么是Ajax？" class="headerlink" title="什么是Ajax？"></a>什么是Ajax？</h1><p>Ajax 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。</p>
-<p>Ajax的全称是Asynchronous JavaScript and XML，即异步JavaScript+XML。它并不是新的编程语言，而是几种原有技术的结合体。<br>通俗的讲呢，我个人的理解是，Ajax就是一种获取和发送数据，客户端与服务器端交互的手段，主要用于前后台的数据交互，数据获取，界面<br>数据异步更新等它由以下几种技术组合而成，包括：</p>
-<p>HTML/XHTML——主要的内容表示语言。<br>CSS——为XHTML提供文本格式定义。<br>DOM——对已载入的页面进行动态更新。<br>XML/json——数据交换格式。<br>XSLT——将XML转换为XHTML（用CSS修饰样式）。<br>XMLHttp——用XMLHttpRequest来和服务器进行异步通信，是主要的通信代理。<br>JavaScript——用来编写Ajax引擎的脚本语言。<br>实际上，在Ajax解决方案中这些技术都是可用的，不过只有三种是必须的：HTML/XHTML、DOM以及JavaScript。</p>
-<h1 id="Ajax原理"><a href="#Ajax原理" class="headerlink" title="Ajax原理"></a>Ajax原理</h1><h2 id="Ajax工作流程"><a href="#Ajax工作流程" class="headerlink" title="Ajax工作流程"></a>Ajax工作流程</h2><img src="/Myblog/2019/02/21/Ajax详解-1-初识Ajax/p1.png" title="Ajax的工作原理">
-<h2 id="XMLHttpRequest方法属性"><a href="#XMLHttpRequest方法属性" class="headerlink" title="XMLHttpRequest方法属性"></a>XMLHttpRequest方法属性</h2><img src="/Myblog/2019/02/21/Ajax详解-1-初识Ajax/p2.png" title="Ajax的方法和属性">
-<h1 id="Ajax原理实现"><a href="#Ajax原理实现" class="headerlink" title="Ajax原理实现"></a>Ajax原理实现</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;%--</span><br><span class="line">  Created by IntelliJ IDEA.</span><br><span class="line">  User: DELL</span><br><span class="line">  <span class="built_in">Date</span>: <span class="number">2019</span>/<span class="number">2</span>/<span class="number">17</span></span><br><span class="line">  Time: <span class="number">22</span>:<span class="number">06</span></span><br><span class="line">  To change <span class="keyword">this</span> template use File | Settings | File Templates.</span><br><span class="line">--%&gt;</span><br><span class="line">&lt;%@ page contentType=<span class="string">"text/html;charset=UTF-8"</span> language=<span class="string">"java"</span> %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;title&gt;小白技术博客&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">    &lt;script&gt;</span></span><br><span class="line"><span class="regexp">      window.onload = function () &#123;</span></span><br><span class="line"><span class="regexp">          /</span><span class="regexp">/1.获取a节点并添加click点击事件</span></span><br><span class="line"><span class="regexp">          document.getElementsByTagName("a")[0].onclick=function () &#123;</span></span><br><span class="line"><span class="regexp">              /</span><span class="regexp">/3.创建一个 XMLHttpRequest 对象</span></span><br><span class="line"><span class="regexp">              var request = new XMLHttpRequest();</span></span><br><span class="line"><span class="regexp">              /</span><span class="regexp">/4.准备发送请求的数据</span></span><br><span class="line"><span class="regexp">              var url = this.href;/</span><span class="regexp">/准备url路径</span></span><br><span class="line"><span class="regexp">              var method = "GET";/</span><span class="regexp">/准备请求方式（POST/</span>GET）</span><br><span class="line">              <span class="comment">//5.调用XMLHttpRequest对象的open方法</span></span><br><span class="line">              request.open(method,url);</span><br><span class="line">              <span class="comment">//6.调用XMLHttpRequest对象的send方法</span></span><br><span class="line">              request.send(<span class="literal">null</span>);<span class="comment">//发射请求</span></span><br><span class="line">              <span class="comment">//7.为XMLHttpRequest对象添加 onreadystatechange事件</span></span><br><span class="line">              request.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="comment">//HTTP状态改变响应事件</span></span><br><span class="line">                  alert(request.readyState);<span class="comment">//实时显示readyState的状态</span></span><br><span class="line">              <span class="comment">//8.判断readyState为 4 时响应完成</span></span><br><span class="line">                  <span class="keyword">if</span>(request.readyState==<span class="number">4</span>)&#123;</span><br><span class="line">              <span class="comment">//9.判断该响应是否可用 status为200 或 304 时，响应正确</span></span><br><span class="line">                      <span class="keyword">if</span>(request.status==<span class="number">200</span>||request.status==<span class="number">304</span>)</span><br><span class="line">              <span class="comment">//10.显示响应得到的数据            </span></span><br><span class="line">                          alert(request.responseText);</span><br><span class="line">                      &#125;</span><br><span class="line">                  &#125;</span><br><span class="line">              &#125;</span><br><span class="line">              <span class="comment">//2.取消默认行为</span></span><br><span class="line">              <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">     &lt;a href=<span class="string">"./hellow"</span>&gt;nihao&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>body&gt;</span><br><span class="line">&lt;<span class="regexp">/html&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br></pre></td></tr></table></figure>
+        <h1 id="安装Mariadb"><a href="#安装Mariadb" class="headerlink" title="安装Mariadb"></a>安装Mariadb</h1><h2 id="yum安装"><a href="#yum安装" class="headerlink" title="yum安装"></a>yum安装</h2><p>这里我们使用 yum 直接安装就好，非常简单 敲入命令即可<br>yum -y install mariadb mariadb-server</p>
+<h2 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h2><p>1.完成安装后，首先就是启动Mariadb服务 和 设置开机自启<br>systemctl start mariadb   //设置启动<br>systemctl enable mariadb  //设置开机自启</p>
+<p>2.然后进行Mariadb的相关配置<br>mysql_secure_installation   //进行配置输入后，开头# 会变成如下<br>就会变成 Enter current password for root (enter for none):&lt;– 这是在让你输入数据库密码，初次进入直接回车，没有密码</p>
+<p>设置密码<br>Set root password? [Y/n] &lt;– 这里输入Y<br>New password: &lt;– 设置root用户的密码<br>Re-enter new password: &lt;– 再输入一次你设置的密码</p>
+<p>其他配置（后面就一路 Y 就完了）<br>Remove anonymous users? [Y/n] &lt;– 是否删除匿名用户，回车<br>Disallow root login remotely? [Y/n] &lt;–是否禁止root远程登录,回车,<br>Remove test database and access to it? [Y/n] &lt;– 是否删除test数据库，回车<br>Reload privilege tables now? [Y/n] &lt;– 是否重新加载权限表，回车</p>
+<p>最后<br>mysql -uroot -p<br>登陆验证  大功告成</p>
+<h1 id="Navicat远程链接"><a href="#Navicat远程链接" class="headerlink" title="Navicat远程链接"></a>Navicat远程链接</h1><p>Navicat 远程链接是通过网络进行链接，所以链接成功与否，与 Centos防火墙设置，Mariadb权限设置有关。<br>这里我们以 阿里云上服务器为例进行讲解。</p>
+<h2 id="设置Mariadb-用户权限"><a href="#设置Mariadb-用户权限" class="headerlink" title="设置Mariadb 用户权限"></a>设置Mariadb 用户权限</h2><ol>
+<li>登陆Mariadb<br>mysql -u root -p</li>
+<li>切换到mysql数据库(这个数据库存的是整个Mariadb的信息，如用户信息)<br>这里需要注意，在Mariadb中的命令是需要加 ; 的<br>use mysql;</li>
+<li>查看root用户信息<br>select user,host from user;<br>如果查看的结果如下图，说明你没有远程连接权限,host 表示这个用户只能在本机登陆<img src="/Myblog/2019/05/24/Linux系列学习-Mariadb安装与远程连接/p1.png" title="示例"></li>
+<li>修改root用户权限，使其可以在任何机器上访问<br>update user set host=’%’ where user =’root’;<br>再 select user ,host from user; 查看<img src="/Myblog/2019/05/24/Linux系列学习-Mariadb安装与远程连接/p2.png" title="示例"></li>
+<li>给root用户授权（所有权限）<br>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root‘@’%’ IDENTIFIED BY ‘root’ WITH GRANT OPTION;<br>然后刷新用户权限<br>flush   privileges;<h2 id="设置Centos7系统防火墙开放端口"><a href="#设置Centos7系统防火墙开放端口" class="headerlink" title="设置Centos7系统防火墙开放端口"></a>设置Centos7系统防火墙开放端口</h2>对Mariadb的用户权限设置完了之后，我们还需要对Centos7防火墙进行设置</li>
+<li>查看防火墙运行状态<br>firewall-cmd    –state<br>如果 状态是 runing 说明防火墙在运行<br>如果 状态是 not runing 说明防火墙没在运行<br>systemctl  stop   firewalld.service   //关闭防火墙的命令<br>systemctl  start   firewalld.service  //启动防火墙的命令</li>
+</ol>
+<p>虽说直接把防火墙关掉也能达到我们连接的目的，但这样很不安全所以建议打开</p>
+<ol start="2">
+<li>查看防火墙开放的端口号<br>firewall-cmd –zone=public –list-ports   //查看防火墙开放的端口号<br>如果开启的端口中没有  3306端口，我们需要将其打开（数据库使用了这个端口）</li>
+<li>开启端口<br>firewall-cmd –zone=public –add-port=3306/tcp –permanent<br>再 重新加载防火墙信息<br>firewall-cmd –reload<br>最后再次查看开启的端口有哪些<br>firewall-cmd –zone=public –list-ports</li>
+</ol>
+<h2 id="最后开放阿里云平台的安全组（不是云平台，这步可以省略）"><a href="#最后开放阿里云平台的安全组（不是云平台，这步可以省略）" class="headerlink" title="最后开放阿里云平台的安全组（不是云平台，这步可以省略）"></a>最后开放阿里云平台的安全组（不是云平台，这步可以省略）</h2><img src="/Myblog/2019/05/24/Linux系列学习-Mariadb安装与远程连接/p3.png" title="示例">
+
       
     </div>
 
@@ -510,7 +527,7 @@
       
         <div class="post-tags">
           
-            <a href="/Myblog/tags/Ajax/" rel="tag"># Ajax</a>
+            <a href="/Myblog/tags/Linux系列学习/" rel="tag"># Linux系列学习</a>
           
         </div>
       
@@ -523,8 +540,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Myblog/2019/02/21/Ajax-3-Ajax的jquery用法/" rel="next" title="Ajax(3)--Ajax的jquery用法">
-                <i class="fa fa-chevron-left"></i> Ajax(3)--Ajax的jquery用法
+              <a href="/Myblog/2019/05/22/Linux系列学习-安装/" rel="next" title="Linux系列学习--安装">
+                <i class="fa fa-chevron-left"></i> Linux系列学习--安装
               </a>
             
           </div>
@@ -533,8 +550,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Myblog/2019/02/26/数据结构之线性表/" rel="prev" title="数据结构之线性表">
-                数据结构之线性表 <i class="fa fa-chevron-right"></i>
+              <a href="/Myblog/2019/05/24/Linux系列学习-Linux基础与指令/" rel="prev" title="Linux系列学习--Linux基础与指令">
+                Linux系列学习--Linux基础与指令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -729,7 +746,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是Ajax？"><span class="nav-number">1.</span> <span class="nav-text">什么是Ajax？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ajax原理"><span class="nav-number">2.</span> <span class="nav-text">Ajax原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ajax工作流程"><span class="nav-number">2.1.</span> <span class="nav-text">Ajax工作流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XMLHttpRequest方法属性"><span class="nav-number">2.2.</span> <span class="nav-text">XMLHttpRequest方法属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ajax原理实现"><span class="nav-number">3.</span> <span class="nav-text">Ajax原理实现</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Mariadb"><span class="nav-number">1.</span> <span class="nav-text">安装Mariadb</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#yum安装"><span class="nav-number">1.1.</span> <span class="nav-text">yum安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础配置"><span class="nav-number">1.2.</span> <span class="nav-text">基础配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Navicat远程链接"><span class="nav-number">2.</span> <span class="nav-text">Navicat远程链接</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置Mariadb-用户权限"><span class="nav-number">2.1.</span> <span class="nav-text">设置Mariadb 用户权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置Centos7系统防火墙开放端口"><span class="nav-number">2.2.</span> <span class="nav-text">设置Centos7系统防火墙开放端口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后开放阿里云平台的安全组（不是云平台，这步可以省略）"><span class="nav-number">2.3.</span> <span class="nav-text">最后开放阿里云平台的安全组（不是云平台，这步可以省略）</span></a></li></ol></li></ol></div>
             
 
           </div>

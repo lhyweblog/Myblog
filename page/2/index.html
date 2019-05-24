@@ -359,6 +359,366 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/04/11/最小生成树问题/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="连贺扬">
+      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
+      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拼搏岁月">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Myblog/2019/04/11/最小生成树问题/" class="post-title-link" itemprop="url">最小生成树问题</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-11 11:23:54 / 修改时间：11:44:07" itemprop="dateCreated datePublished" datetime="2019-04-11T11:23:54+08:00">2019-04-11</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/ACM算法/" itemprop="url" rel="index"><span itemprop="name">ACM算法</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/Myblog/2019/04/11/最小生成树问题/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/04/11/最小生成树问题/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#前言<br>最小生生成树问题描述：边权和最小的生成树<br><figure class="highlight plain"><figcaption><span>点击左侧link跳转</span><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1863" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">应用实例</span><br></pre></td></tr></table></figure></p>
+<p>#解决方法：</p>
+<p>##1.Kruskal(克鲁斯卡尔)算法</p>
+<p>算法思想：<br>先将所有边，按照边权从小到大排序，然后从最小的开始，一个一个判断，如果这个边加入生成树中，没有构成回路，<br>就符合，将边加入生成树，如果形成了回路，就跳过，判断下一个。那么，应该如何来判断是否形成了回路呢？这里可以用并查集<br>findf的方法，如果新边的两个节点，属于同一个祖先，则他们就在生成树中，则这个边必定会形成回路，所以舍弃，如果祖先不同，<br>就将一个节点的父节点设为另一个节点，就将边加入到了树中。</p>
+<figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N =<span class="number">10000</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> M =<span class="number">110</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> u;</span><br><span class="line">    <span class="keyword">int</span> v;</span><br><span class="line">    <span class="keyword">int</span> w;</span><br><span class="line">&#125; ;</span><br><span class="line">node a[N];</span><br><span class="line"><span class="keyword">int</span> f[M];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(node a,node b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.w&lt;b.w;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findf</span><span class="params">(<span class="keyword">int</span> u)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(f[u]==<span class="number">-1</span>) <span class="keyword">return</span> u;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> f[u]=findf(f[u]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Kruskal</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m)</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(f,<span class="number">-1</span>,<span class="keyword">sizeof</span> f);</span><br><span class="line">    sort(a,a+n,cmp);</span><br><span class="line">    <span class="keyword">int</span> res =<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> x1 = a[i].u;</span><br><span class="line">        <span class="keyword">int</span> x2 = a[i].v;</span><br><span class="line">        <span class="keyword">int</span> fx1 = findf(x1);</span><br><span class="line">        <span class="keyword">int</span> fx2 = findf(x2);</span><br><span class="line">        <span class="keyword">if</span>(fx1 != fx2 || (fx1==<span class="number">-1</span>&amp;&amp;fx2==<span class="number">-1</span>))&#123;</span><br><span class="line">            f[fx2] = fx1;</span><br><span class="line">            cnt++;</span><br><span class="line">            res += a[i].w;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(cnt == m<span class="number">-1</span>)&#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(cnt&lt; m<span class="number">-1</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a[i].u;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a[i].v;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a[i].w;</span><br><span class="line">        &#125;</span><br><span class="line">       <span class="keyword">int</span> ans= Kruskal(n,m);</span><br><span class="line">        <span class="keyword">if</span>(ans == <span class="number">-1</span>) <span class="built_in">cout</span>&lt;&lt;<span class="string">"?"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>##2.prim(普里姆)算法</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/04/08/Tarjan算法详解/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="连贺扬">
+      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
+      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拼搏岁月">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Myblog/2019/04/08/Tarjan算法详解/" class="post-title-link" itemprop="url">Tarjan算法详解</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-08 14:32:48 / 修改时间：14:40:41" itemprop="dateCreated datePublished" datetime="2019-04-08T14:32:48+08:00">2019-04-08</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/ACM算法/" itemprop="url" rel="index"><span itemprop="name">ACM算法</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/Myblog/2019/04/08/Tarjan算法详解/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/04/08/Tarjan算法详解/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#Tarjan算法介绍<br>一种由Robert Tarjan提出的求解有向图强连通分量的线性时间的算法。通过变形，其亦可以求解无向图问题<br>桥：，割点：，连通分量：。</p>
+<p>#适用问题：<br>求解（有向图/无向图）的，桥，割点，环，回路等问题</p>
+<p>#整体思想：<br>如果我们欲要求解，桥的个数，割点的个数，环的数目，归根结底，是分析清楚一个图 有几个 环，每个环包含哪些节点，那些边。而 tarjan算法就是做的这件事情，通过dfs遍历每一条边和节点，算出有几个环，每个环中有哪些节点。那么是如何做的呢，整体上我们可以这么理解。<br>首先定义两个 数组 dfn[i]  low[i]  分别代表 每个节点的代号  和 每个环的代号，还有一个分析的次序 cnt变量。然后我们用dfs 深度遍历每一个顶点，每遍历一个节点 cnt++，low[i]=dfn[i]=cnt 就是说，每个节点的代号代表它是第几个被我们分析的，同时low[i]=cnt 是说刚开始我们无法判断哪些节点能组成环，所以就初始化为每个节点自己是一个环，这个环的代号就是自己的代号。而当我们分析到一定程度后<br>发现，某些节点能组成一个环，再回溯，将这几个节点所属环代号改为一个统一的环代号。到最后，如果一个节点的环代号和自己的代号相等，说明他是一个割点，而如果不相等，则这个节点属于一个<br>环，并且通过环代号知道他是那个环。</p>
+<p>#详细步骤分解：<br><img src="/Myblog/2019/04/08/Tarjan算法详解/tarjan.png" title="图"><br>这里我们需要对一些变量重新定义其在代码中的含义，之前所说只是理解上的含义。<br>dfn[i]:节点 i dfs的次序<br>low[i]: 节点 i 所在环中 所有节点中最小的 dfn[i]。<br>vis[i]:这个节点是否被遍历过，遍历过为1，否则为0<br>cnt:遍历次数<br>a[60]:用来存储图的 vector。<br>假如我们从  节点1  开始遍历， low[1]=dfn[1]=cnt=1; 然后遍历他的下一个节点，如果下一个节点曾经遍历过，说明这里能形成一个环，如果没便利过，就接着往下遍历。下一个是 节点2</p>
+<p>　　low[2]=dfn[2]=cnt=2; 再下一个是 节点3  low[3]=dfn[3]=cnt=3 , 然后  low[4]=dfn[4]=cnt =4,直到 4 的下一个节点可以到 节点2 曾经便利过 ，因此节点2到节点4之间会有一个环，接着我们向后回溯</p>
+<p>　　使 low[4]=min(low[4],low[2])=2   low[3]=min(low[3],low[4])=2   low[2]=min(low[2],low[3])=2  low[1]=min(low[1],low[2])=1, 我们就会发现 节点2 ，节点3 ，节点4，的low与dfn就不一样了，且low都等于2，说明</p>
+<p>　　他们三个组成了一个环，然后接着向下遍历 节点5 ，没有被遍历过，所以low[5]=dfn[5]=cnt=5;</p>
+<p>　　至此 整体上 low[2]=low[3]=low[4]=2     low[1]=dfn[1]=1     low[5]=dfn[5]=5; 所以，这个图中有那几个群 ，群里有哪些节点，有哪些是割点，桥等 都一目了然了。</p>
+<p>　　下面是详细的代码</p>
+<p>　　求一个无向图的所有桥的个数，先输入两个数 n个节点，m条边。再输入 m对 数代表边的两个节点。<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a[<span class="number">60</span>];</span><br><span class="line"><span class="keyword">int</span> dfn[<span class="number">60</span>];</span><br><span class="line"><span class="keyword">int</span> low[<span class="number">60</span>];<span class="keyword">int</span> vis[<span class="number">60</span>];</span><br><span class="line"><span class="keyword">int</span> cnt=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> dig=<span class="number">0</span>;</span><br><span class="line"><span class="comment">//这里是tarjan代码模板核心</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">tarjan</span><span class="params">(<span class="keyword">int</span> w,<span class="keyword">int</span> u)</span></span>&#123;</span><br><span class="line">    vis[u]=<span class="number">1</span>;</span><br><span class="line">    low[u]=dfn[u]=(cnt++);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;a[u].size();i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> v = a[u][i];</span><br><span class="line">        <span class="keyword">if</span>(v==w) <span class="keyword">continue</span>;<span class="comment">//因为是无向图，防止向后返回去遍历</span></span><br><span class="line">        <span class="keyword">if</span>(vis[v]!=<span class="number">1</span>) tarjan(u,v);<span class="comment">//没有便利过，就接着向下遍历，直到找到后，再执行下面的代码，也就是回溯。</span></span><br><span class="line">        <span class="keyword">if</span>(vis[v]==<span class="number">1</span>) low[u]=min(low[u],low[v]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(low[u]==dfn[u])&#123;</span><br><span class="line">        dig++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">　　<span class="comment">//初始化函数</span></span><br><span class="line">    <span class="built_in">memset</span>(dfn,<span class="number">0</span>,<span class="keyword">sizeof</span> dfn);</span><br><span class="line">    <span class="built_in">memset</span>(low,<span class="number">0</span>,<span class="keyword">sizeof</span> low);</span><br><span class="line">    <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span> vis);</span><br><span class="line">    <span class="built_in">memset</span>(sp,<span class="number">0</span>,<span class="keyword">sizeof</span> sp);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    init();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> k1,k2;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;k1&gt;&gt;k2;</span><br><span class="line">        a[k1].push_back(k2);</span><br><span class="line">        a[k2].push_back(k1);</span><br><span class="line">    &#125;</span><br><span class="line">    tarjan(<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;dig<span class="number">-1</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/04/08/解题报告-cf600c/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1634,181 +1994,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/03/09/解题报告-nyoj586/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="连贺扬">
-      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
-      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="拼搏岁月">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Myblog/2019/03/09/解题报告-nyoj586/" class="post-title-link" itemprop="url">解题报告-nyoj586</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-03-09 13:08:28 / 修改时间：13:17:17" itemprop="dateCreated datePublished" datetime="2019-03-09T13:08:28+08:00">2019-03-09</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/ACM算法/" itemprop="url" rel="index"><span itemprop="name">ACM算法</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <a href="/Myblog/2019/03/09/解题报告-nyoj586/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/03/09/解题报告-nyoj586/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><figcaption><span>点击左侧link跳转</span><a href="http://nyoj.top/problem/586" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原题连接</span><br></pre></td></tr></table></figure>
-<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>典型的求解最小值中得最大值问题，所以可以用二分的思想枚举所有可能的最小距离，在其中找出最大的可能<br>而验证这个距离是否符合题意，又要用到贪心的思想去验证。for循环搜索安排牛的点，当这个点与上个点间距离大于最小距离时，cnt++，<br>搜索完毕，如果cnt大于牛的数量，那么这个最小距离就符合二分的接着向更大的mid~r间枚举，如果cnt小于牛的数量，说明<br>不符合，二分向l~mid区间枚举。</p>
-<h1 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h1><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> a[N];</span><br><span class="line"><span class="keyword">int</span> n,c;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> w=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> str=a[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i]-str&gt;=x)&#123;</span><br><span class="line">            w++;</span><br><span class="line">            str=a[i];</span><br><span class="line">            <span class="keyword">if</span>(w&gt;=c)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//    cout&lt;&lt;"x: "&lt;&lt;x&lt;&lt;"w: "&lt;&lt;w&lt;&lt;endl;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;c)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">        &#125;</span><br><span class="line">        sort(a,a+n);</span><br><span class="line">        <span class="keyword">int</span> r=a[n<span class="number">-1</span>]-a[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> l=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(l&lt;=r)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l+(r-l)/<span class="number">2</span>;</span><br><span class="line"><span class="comment">//        cout&lt;&lt;"l:"&lt;&lt;l&lt;&lt;"   r:"&lt;&lt;r&lt;&lt;"   mid:"&lt;&lt;mid&lt;&lt;endl;</span></span><br><span class="line">            <span class="keyword">if</span>(judge(mid))&#123;</span><br><span class="line">                l=mid+<span class="number">1</span>;</span><br><span class="line">                ans=max(mid,ans);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                r=mid<span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/03/09/基础背包问题总结/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1983,183 +2168,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/03/07/jsp学习记录/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="连贺扬">
-      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
-      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="拼搏岁月">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Myblog/2019/03/07/jsp学习记录/" class="post-title-link" itemprop="url">jsp学习记录</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-03-07 23:03:20 / 修改时间：23:08:23" itemprop="dateCreated datePublished" datetime="2019-03-07T23:03:20+08:00">2019-03-07</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/javaWeb/" itemprop="url" rel="index"><span itemprop="name">javaWeb</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <a href="/Myblog/2019/03/07/jsp学习记录/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/03/07/jsp学习记录/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <img src="/Myblog/2019/03/07/jsp学习记录/jsp1.png" title="jsp学习记录">
-<img src="/Myblog/2019/03/07/jsp学习记录/jsp2.png" title="jsp学习记录">
-<img src="/Myblog/2019/03/07/jsp学习记录/jsp3.png" title="jsp学习记录">
-<img src="/Myblog/2019/03/07/jsp学习记录/jsp4.png" title="jsp学习记录">
-<img src="/Myblog/2019/03/07/jsp学习记录/jsp5.png" title="jsp学习记录">
-<img src="/Myblog/2019/03/07/jsp学习记录/jsp6.png" title="jsp学习记录">
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2209,7 +2217,7 @@
                 
                   <a href="/Myblog/archives">
                 
-                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
