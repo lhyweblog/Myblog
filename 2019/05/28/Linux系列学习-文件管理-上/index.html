@@ -96,25 +96,27 @@
 
 
 
-  <meta name="description" content="前言本篇文章我们学习线性表，首先我们要知道数据结构分为逻辑结构和物理结构，逻辑结构分为线性结构，集合结构，树形结构和图形结构四大类。物理结构分为顺序存储结构和链式存储结构。而今天所讲的线性表，自然是属于线性结构，而根据物理存储的方式不同，线性表又可以分为顺序存储的线性表（顺序表），和链式存储的线性表（链表） 线性表基本概念线性表（List）：由零个或多个数据元素组成的有限序列。   注意： 1.线">
-<meta name="keywords" content="数据结构">
+  <meta name="description" content="总述：目录结构如图下图：在Linux 系统中，所有的文件都在一个根 / 目录中，下面又很多文件分区，学习Linux文件，首先要明确一个概念：在Linux中，一切皆文件，一切的东西都是文件的形式在存在着  每个文件分区的意义如下（不同的人的分布名称不尽相同）：  bin：存放普通用户使用的命令/bin/ls，bin/date，或者可执行文件 sbin：存放管理员使用的命令/sbin/service，">
+<meta name="keywords" content="Linux系列学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构之线性表">
-<meta property="og:url" content="http://yoursite.com/2019/02/26/数据结构之线性表/index.html">
+<meta property="og:title" content="Linux系列学习-文件管理(上)">
+<meta property="og:url" content="http://yoursite.com/2019/05/28/Linux系列学习-文件管理-上/index.html">
 <meta property="og:site_name" content="拼搏岁月">
-<meta property="og:description" content="前言本篇文章我们学习线性表，首先我们要知道数据结构分为逻辑结构和物理结构，逻辑结构分为线性结构，集合结构，树形结构和图形结构四大类。物理结构分为顺序存储结构和链式存储结构。而今天所讲的线性表，自然是属于线性结构，而根据物理存储的方式不同，线性表又可以分为顺序存储的线性表（顺序表），和链式存储的线性表（链表） 线性表基本概念线性表（List）：由零个或多个数据元素组成的有限序列。   注意： 1.线">
+<meta property="og:description" content="总述：目录结构如图下图：在Linux 系统中，所有的文件都在一个根 / 目录中，下面又很多文件分区，学习Linux文件，首先要明确一个概念：在Linux中，一切皆文件，一切的东西都是文件的形式在存在着  每个文件分区的意义如下（不同的人的分布名称不尽相同）：  bin：存放普通用户使用的命令/bin/ls，bin/date，或者可执行文件 sbin：存放管理员使用的命令/sbin/service，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-26T02:46:08.856Z">
+<meta property="og:image" content="http://yoursite.com/Myblog/2019/05/28/Linux系列学习-文件管理-上/p1.png">
+<meta property="og:updated_time" content="2019-05-28T11:31:09.466Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据结构之线性表">
-<meta name="twitter:description" content="前言本篇文章我们学习线性表，首先我们要知道数据结构分为逻辑结构和物理结构，逻辑结构分为线性结构，集合结构，树形结构和图形结构四大类。物理结构分为顺序存储结构和链式存储结构。而今天所讲的线性表，自然是属于线性结构，而根据物理存储的方式不同，线性表又可以分为顺序存储的线性表（顺序表），和链式存储的线性表（链表） 线性表基本概念线性表（List）：由零个或多个数据元素组成的有限序列。   注意： 1.线">
+<meta name="twitter:title" content="Linux系列学习-文件管理(上)">
+<meta name="twitter:description" content="总述：目录结构如图下图：在Linux 系统中，所有的文件都在一个根 / 目录中，下面又很多文件分区，学习Linux文件，首先要明确一个概念：在Linux中，一切皆文件，一切的东西都是文件的形式在存在着  每个文件分区的意义如下（不同的人的分布名称不尽相同）：  bin：存放普通用户使用的命令/bin/ls，bin/date，或者可执行文件 sbin：存放管理员使用的命令/sbin/service，">
+<meta name="twitter:image" content="http://yoursite.com/Myblog/2019/05/28/Linux系列学习-文件管理-上/p1.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/26/数据结构之线性表/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/28/Linux系列学习-文件管理-上/">
 
 
 
@@ -124,7 +126,7 @@
   };
 </script>
 
-  <title>数据结构之线性表 | 拼搏岁月</title>
+  <title>Linux系列学习-文件管理(上) | 拼搏岁月</title>
   
 
 
@@ -360,7 +362,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/02/26/数据结构之线性表/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/05/28/Linux系列学习-文件管理-上/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="连贺扬">
@@ -377,7 +379,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数据结构之线性表
+          <h1 class="post-title" itemprop="name headline">Linux系列学习-文件管理(上)
 
               
             
@@ -403,7 +405,7 @@
                 
               
 
-              <time title="创建时间：2019-02-26 10:20:49 / 修改时间：10:46:08" itemprop="dateCreated datePublished" datetime="2019-02-26T10:20:49+08:00">2019-02-26</time>
+              <time title="创建时间：2019-05-28 11:10:20 / 修改时间：19:31:09" itemprop="dateCreated datePublished" datetime="2019-05-28T11:10:20+08:00">2019-05-28</time>
             
 
             
@@ -425,7 +427,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/ACM算法/" itemprop="url" rel="index"><span itemprop="name">ACM算法</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/javaWeb/" itemprop="url" rel="index"><span itemprop="name">javaWeb</span></a></span>
 
                 
                 
@@ -443,8 +445,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
             
-                <a href="/Myblog/2019/02/26/数据结构之线性表/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/02/26/数据结构之线性表/" itemprop="commentCount"></span>
+                <a href="/Myblog/2019/05/28/Linux系列学习-文件管理-上/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/05/28/Linux系列学习-文件管理-上/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -479,37 +481,47 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本篇文章我们学习线性表，首先我们要知道数据结构分为逻辑结构和物理结构，逻辑结构分为线性结构，集合结构<br>，树形结构和图形结构四大类。物理结构分为顺序存储结构和链式存储结构。而今天所讲的线性表，自然是属于线性<br>结构，而根据物理存储的方式不同，线性表又可以分为顺序存储的线性表（顺序表），和链式存储的线性表（链表）</p>
-<h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><pre><code>线性表（List）：由零个或多个数据元素组成的有限序列。  
-注意：
-1.线性表是一个序列。
-
-2.0个元素构成的线性表是空表。
-
-3.线性表中的第一个元素无前驱，最后一个元素无后继，其他元素有且只有一个前驱和后继。
-
-4.线性表是有长度的，其长度就是元素个数，且线性表的元素个数是有限的，也就是说，线性表的长度是有限的。
-如果用数学语言来进行定义，可如下：
-若将线性表记为（a1,…,ai-1,ai,ai+1,…an）,则表中ai-1领先于ai,ai领先于ai+1,称ai-1是ai的直接前驱元素,ai+1是ai的直接后继元素。
-</code></pre><h2 id="线性表的基本操作"><a href="#线性表的基本操作" class="headerlink" title="线性表的基本操作"></a>线性表的基本操作</h2><pre><code>InitList(*L);初始化操作，建立一个空的线性表
-ListEmpty(L);判断线性表是否为空，空则返回true，否则返回false
-ClearList(*L);将线性表清空
-GetElem(L,i,*e);将线性表L中第i哥元素返回给e
-LocateElem(L,e);在线性表L中查找元素e，如果查找成功，返回该元素在表中序号，如果查找失败返回0
-ListInsert(*L,i,e);在线性表L中的i位置插入元素e
-ListDelete(*L,i,*e);删除线性表L中第i个位置上的元素，并用*e返回其值
-ListLength();返回线性表L中元素的个数
-
-对于不同的应用，线性表的操作是不同的，上述操作是最基本的
-对于实际问题中涉及的关于线性表的更复杂操作，完全可以用这些基本操作的组合来实现。
-</code></pre><h2 id="两种不同线性表"><a href="#两种不同线性表" class="headerlink" title="两种不同线性表"></a>两种不同线性表</h2><h3 id="顺序表"><a href="#顺序表" class="headerlink" title="顺序表"></a>顺序表</h3><pre><code>顺序表是指顺序存储结构的线性表，指的是用一段地址连续的存储单元依次存储线性表的数据元素。  
-顺序表表现在物理内存中，也就是物理上的存储方式，事实上就是在内存中找个初始地址，然后通过
-占位的形式，把一定的内存空间给占了，然后把相同数据类型的数据元素依次放在这块空地中。注意，
-这块物理内存的地址空间是连续的。   
-举 个例子，比如C语言中的基本变量的存储就是连续的存储在内存中的，比如声明一个整数i，在64位
-系统中整数i在内存中占8字节，那么系统就会在内存中为这 个整型变量分配一个长度为8个字节的连续
-的地址空间，然后把这个i的二进制形式从高地址向低地址存储，长度不足时候，最高位用0补齐。
-</code></pre>
+        <h1 id="总述："><a href="#总述：" class="headerlink" title="总述："></a>总述：</h1><h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><p>如图下图：在Linux 系统中，所有的文件都在一个根 / 目录中，下面又很多文件分区，学习Linux文件，首先要明确一个概念：<br>在Linux中，一切皆文件，一切的东西都是文件的形式在存在着</p>
+<img src="/Myblog/2019/05/28/Linux系列学习-文件管理-上/p1.png" title="示例">
+<p>每个文件分区的意义如下（不同的人的分布名称不尽相同）：</p>
+<ol>
+<li>bin：存放普通用户使用的命令/bin/ls，bin/date，或者可执行文件</li>
+<li>sbin：存放管理员使用的命令/sbin/service，或者可执行文件</li>
+<li>dev： 存放设备的文件</li>
+<li>root：root用户的home文件</li>
+<li>home: 存放普通用户的目录</li>
+<li>proc: 虚拟文件系统，反映出的是内核，进程信息或者实时状态。</li>
+<li>user: 系统文件，相当于windows下的c:\Windows<pre><code>/user/local  软件安装目录，相当于c:\Program
+/user/bin   普通用户使用的应用程序
+/user/sbin  管理员使用的应用程序
+/usr/lib    库文件
+/user/lib64  库文件
+</code></pre></li>
+<li>boot: 存放的是 系统启动的相关文件</li>
+<li>etc: 配置文件 如：系统相关网络配置 /etc/sysconfig/network   应用相关配置 /etc/ssh/sshd_config…</li>
+<li>lib and lib64 :库文件</li>
+<li>tmp: 临时文件（全局可写：进程产生的临时文件）</li>
+<li>var: 存放一些变化文件，如数据库，日志，邮件等</li>
+</ol>
+<p>剩下的其他文件目录不常用：<br>media 移动设备挂载点<br>mnt 手工挂载设备的挂载点<br>misc automount进程挂载</p>
+<h1 id="路径访问"><a href="#路径访问" class="headerlink" title="路径访问"></a>路径访问</h1><p>这个知识点，主要需要掌握 查看目录结构，根据路径访问文件文件夹等，主要要记住一些常用命令<br>首先文件路径： 1.绝对路径<br>                /bin/。。。 从 根目录 / 开始<br>             2.想对路径<br>             ../表示上一层目录   ./表示当前目录<br>             bin/。。。== ./bin/。。。 在当前目录下的bin文件</p>
+<p>常用命令：</p>
+<ol>
+<li>ls + 路径 命令<br>查看该路径下的 文件有哪些 路径为空，就是当前目录</li>
+<li>cd + 路径 命令<br>有路径：访问 该路径的目录<br>路径为空：则访问用户的 home 目录<br>路径为 - ：cd -  返回上一层路径</li>
+<li><p>pwd 命令<br>显示 当前目录路径</p>
+<h1 id="增删改查"><a href="#增删改查" class="headerlink" title="增删改查"></a>增删改查</h1><h2 id="增"><a href="#增" class="headerlink" title="增"></a>增</h2><p>创建文件： touch + 文件名<br>touch b1.txt<br>创建文件夹: mkdir + 文件夹名<br>mkdir mytest</p>
+<h2 id="删"><a href="#删" class="headerlink" title="删"></a>删</h2><p>rm + 参数 + 路径文件  删除该文件（该命令慎用）<br>最好 是配合cd 进入到那个文件夹 再用 rm + 文件名删除<br>rm 一些参数：<br>-f 强制删除（默认）<br>-i 删除前询问是否操作<br>-r 递归删除</p>
+<h2 id="改"><a href="#改" class="headerlink" title="改"></a>改</h2><p>这里主要讲 mv 移动指令，通过mv指令可以实现 文件移动，重命名，剪切等操作<br>命令格式：mv [-fiv] source destination<br>移动：mv file1 /home/dir  讲file1 移动到 home/dir下<br>移动并改名：mv file1 /home/dir/file2  讲file1 移动到 home/dir下并改名file2<br>重命名： mv file1 file2 当亲文件夹下转移并改名<br>mv 一些参数：<br>-f :直接移动不询问（默认）<br>-i :若目标文件已经存在，询问是否覆盖<br>-u ：如果目标文件已经存在，源文件比较新，就覆盖</p>
+<p>cp 复制命令<br>命令格式：cp [-adfilprsu] 源文件(source) 目标文件(destination)</p>
+<pre><code>cp [option] source1 source2 source3 ...  directory
+</code></pre><p>  参数说明：<br>  -a:是指archive的意思，也说是指复制所有的目录<br>  -d:若源文件为连接文件(link file)，则复制连接文件属性而非文件本身<br>  -f:强制(force)，若有重复或其它疑问时，不会询问用户，而强制复制<br>  -i:若目标文件(destination)已存在，在覆盖时会先询问是否真的操作<br>  -l:建立硬连接(hard link)的连接文件，而非复制文件本身<br>  -p:与文件的属性一起复制，而非使用默认属性<br>  -r:递归复制，用于目录的复制操作<br>  -s:复制成符号连接文件(symbolic link)，即“快捷方式”文件<br>  -u:若目标文件比源文件旧，更新目标文件<br>  如将/test1目录下的file1复制到/test3目录，并将文件名改为file2,可输入以下命令：<br>  cp /test1/file1 /test3/file2</p>
+<h2 id="查"><a href="#查" class="headerlink" title="查"></a>查</h2></li>
+<li>find<br>find /root test.txt  在/root目录下查找 test.txt</li>
+<li>grep -r<br>(1)grep ‘test’ d*　　#显示所有以d开头的文件中包含 test的行<br>(2)grep ‘test’ aa bb cc 　　 #显示在aa，bb，cc文件中包含test的行<br>(3)grep ‘[a-z]{5}’ aa 　　#显示所有包含每行字符串至少有5个连续小写字符的字符串的行<br>(4)grep magic /usr/src　　#显示/usr/src目录下的文件(不含子目录)包含magic的行<br>(5)grep -r magic /usr/src　　#显示/usr/src目录下的文件(包含子目录)包含magic的行<br>(6)grep -w pattern files ：只匹配整个单词，而不是字符串的一部分(如匹配’magic’，而不是’magical’)，</li>
+<li>which<br>which grep  查询bin文件（添加过环境变量的）</li>
+</ol>
+<h1 id="扩展（文件时间-文件类型）"><a href="#扩展（文件时间-文件类型）" class="headerlink" title="扩展（文件时间/文件类型）"></a>扩展（文件时间/文件类型）</h1>
       
     </div>
 
@@ -532,7 +544,7 @@ ListLength();返回线性表L中元素的个数
       
         <div class="post-tags">
           
-            <a href="/Myblog/tags/数据结构/" rel="tag"># 数据结构</a>
+            <a href="/Myblog/tags/Linux系列学习/" rel="tag"># Linux系列学习</a>
           
         </div>
       
@@ -545,8 +557,8 @@ ListLength();返回线性表L中元素的个数
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Myblog/2019/02/21/Ajax详解-1-初识Ajax/" rel="next" title="Ajax详解(1)--初识Ajax">
-                <i class="fa fa-chevron-left"></i> Ajax详解(1)--初识Ajax
+              <a href="/Myblog/2019/05/24/Linux系列学习-Linux基础与指令/" rel="next" title="Linux系列学习--Linux基础与指令">
+                <i class="fa fa-chevron-left"></i> Linux系列学习--Linux基础与指令
               </a>
             
           </div>
@@ -555,8 +567,8 @@ ListLength();返回线性表L中元素的个数
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Myblog/2019/03/05/ACM基础-备战蓝桥/" rel="prev" title="ACM基础">
-                ACM基础 <i class="fa fa-chevron-right"></i>
+              <a href="/Myblog/2019/05/28/Linux系列学习-文件管理-下/" rel="prev" title="Linux系列学习-文件管理(下)">
+                Linux系列学习-文件管理(下) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -751,7 +763,7 @@ ListLength();返回线性表L中元素的个数
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线性表"><span class="nav-number">2.</span> <span class="nav-text">线性表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">2.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性表的基本操作"><span class="nav-number">2.2.</span> <span class="nav-text">线性表的基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两种不同线性表"><span class="nav-number">2.3.</span> <span class="nav-text">两种不同线性表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#顺序表"><span class="nav-number">2.3.1.</span> <span class="nav-text">顺序表</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#总述："><span class="nav-number">1.</span> <span class="nav-text">总述：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目录结构"><span class="nav-number">2.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#路径访问"><span class="nav-number">3.</span> <span class="nav-text">路径访问</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#增删改查"><span class="nav-number">4.</span> <span class="nav-text">增删改查</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#增"><span class="nav-number">4.1.</span> <span class="nav-text">增</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删"><span class="nav-number">4.2.</span> <span class="nav-text">删</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改"><span class="nav-number">4.3.</span> <span class="nav-text">改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查"><span class="nav-number">4.4.</span> <span class="nav-text">查</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#扩展（文件时间-文件类型）"><span class="nav-number">5.</span> <span class="nav-text">扩展（文件时间/文件类型）</span></a></li></ol></div>
             
 
           </div>

@@ -359,6 +359,408 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/05/28/Linux系列学习-文件管理-下/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="连贺扬">
+      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
+      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拼搏岁月">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Myblog/2019/05/28/Linux系列学习-文件管理-下/" class="post-title-link" itemprop="url">Linux系列学习-文件管理(下)</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-28 11:11:00 / 修改时间：18:59:20" itemprop="dateCreated datePublished" datetime="2019-05-28T11:11:00+08:00">2019-05-28</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/javaWeb/" itemprop="url" rel="index"><span itemprop="name">javaWeb</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/Myblog/2019/05/28/Linux系列学习-文件管理-下/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/05/28/Linux系列学习-文件管理-下/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>这个章节将主要讲解 vim 文件编辑器，你将学会如何编辑一个文件，如何修改一个文件</p>
+<h1 id="基本工作方式"><a href="#基本工作方式" class="headerlink" title="基本工作方式"></a>基本工作方式</h1><img src="/Myblog/2019/05/28/Linux系列学习-文件管理-下/p1.png" title="示例">
+<p>INSERT：编辑模式<br>VISUAL： 查看模式<br>：wq  ：保存并退出<br>ctrl+Z 退出  vim 模式</p>
+<h1 id="光标定位"><a href="#光标定位" class="headerlink" title="光标定位"></a>光标定位</h1><p>这里 这些键 自己按一下试试就知道了,具体没有做详细的对应<br>光标定位 需要在 command mode 模式下才能使用<br>上下左右：方向键 或者 hjkl<br>一行的开头或结尾：0 , $<br>第一行,最后一行：gg ,G<br>搜索字符串：/+正则表达式 (n 搜索结果的下一个，N 搜索结果的上一个)</p>
+<h1 id="简单编辑"><a href="#简单编辑" class="headerlink" title="简单编辑"></a>简单编辑</h1><p>删除： </p>
+<ol>
+<li>dd  删除光标所在行</li>
+<li>x 删除光标所在字符</li>
+<li>D 删除光标到行尾部分</li>
+</ol>
+<p>复制：</p>
+<ol>
+<li>yy 复制光标所在行</li>
+<li>nyy 复制光标所在及后面的多行<br>p 粘贴输出</li>
+</ol>
+<p>查找替换：<br>命令是：   : 范围s/查找内容/替换内容/选项<br>如： :1,5s/root/kkk/   1-5行每行第一个root换成kkk<br>     :1,$/root/kkk/g   1-最后一行每行所有的root换成kkk<br>其中 查找内容 可以用正则表达式</p>
+<p>开启行号：<br>set nu 开启行号<br>set nonu 取消行号</p>
+<p>转存：<br>：w 保存在当前文件<br>：w /root/test  转存在/root/test下</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/05/28/Linux系列学习-文件管理-上/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="连贺扬">
+      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
+      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拼搏岁月">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Myblog/2019/05/28/Linux系列学习-文件管理-上/" class="post-title-link" itemprop="url">Linux系列学习-文件管理(上)</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-28 11:10:20 / 修改时间：19:31:09" itemprop="dateCreated datePublished" datetime="2019-05-28T11:10:20+08:00">2019-05-28</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/javaWeb/" itemprop="url" rel="index"><span itemprop="name">javaWeb</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/Myblog/2019/05/28/Linux系列学习-文件管理-上/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/05/28/Linux系列学习-文件管理-上/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="总述："><a href="#总述：" class="headerlink" title="总述："></a>总述：</h1><h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><p>如图下图：在Linux 系统中，所有的文件都在一个根 / 目录中，下面又很多文件分区，学习Linux文件，首先要明确一个概念：<br>在Linux中，一切皆文件，一切的东西都是文件的形式在存在着</p>
+<img src="/Myblog/2019/05/28/Linux系列学习-文件管理-上/p1.png" title="示例">
+<p>每个文件分区的意义如下（不同的人的分布名称不尽相同）：</p>
+<ol>
+<li>bin：存放普通用户使用的命令/bin/ls，bin/date，或者可执行文件</li>
+<li>sbin：存放管理员使用的命令/sbin/service，或者可执行文件</li>
+<li>dev： 存放设备的文件</li>
+<li>root：root用户的home文件</li>
+<li>home: 存放普通用户的目录</li>
+<li>proc: 虚拟文件系统，反映出的是内核，进程信息或者实时状态。</li>
+<li>user: 系统文件，相当于windows下的c:\Windows<pre><code>/user/local  软件安装目录，相当于c:\Program
+/user/bin   普通用户使用的应用程序
+/user/sbin  管理员使用的应用程序
+/usr/lib    库文件
+/user/lib64  库文件
+</code></pre></li>
+<li>boot: 存放的是 系统启动的相关文件</li>
+<li>etc: 配置文件 如：系统相关网络配置 /etc/sysconfig/network   应用相关配置 /etc/ssh/sshd_config…</li>
+<li>lib and lib64 :库文件</li>
+<li>tmp: 临时文件（全局可写：进程产生的临时文件）</li>
+<li>var: 存放一些变化文件，如数据库，日志，邮件等</li>
+</ol>
+<p>剩下的其他文件目录不常用：<br>media 移动设备挂载点<br>mnt 手工挂载设备的挂载点<br>misc automount进程挂载</p>
+<h1 id="路径访问"><a href="#路径访问" class="headerlink" title="路径访问"></a>路径访问</h1><p>这个知识点，主要需要掌握 查看目录结构，根据路径访问文件文件夹等，主要要记住一些常用命令<br>首先文件路径： 1.绝对路径<br>                /bin/。。。 从 根目录 / 开始<br>             2.想对路径<br>             ../表示上一层目录   ./表示当前目录<br>             bin/。。。== ./bin/。。。 在当前目录下的bin文件</p>
+<p>常用命令：</p>
+<ol>
+<li>ls + 路径 命令<br>查看该路径下的 文件有哪些 路径为空，就是当前目录</li>
+<li>cd + 路径 命令<br>有路径：访问 该路径的目录<br>路径为空：则访问用户的 home 目录<br>路径为 - ：cd -  返回上一层路径</li>
+<li><p>pwd 命令<br>显示 当前目录路径</p>
+<h1 id="增删改查"><a href="#增删改查" class="headerlink" title="增删改查"></a>增删改查</h1><h2 id="增"><a href="#增" class="headerlink" title="增"></a>增</h2><p>创建文件： touch + 文件名<br>touch b1.txt<br>创建文件夹: mkdir + 文件夹名<br>mkdir mytest</p>
+<h2 id="删"><a href="#删" class="headerlink" title="删"></a>删</h2><p>rm + 参数 + 路径文件  删除该文件（该命令慎用）<br>最好 是配合cd 进入到那个文件夹 再用 rm + 文件名删除<br>rm 一些参数：<br>-f 强制删除（默认）<br>-i 删除前询问是否操作<br>-r 递归删除</p>
+<h2 id="改"><a href="#改" class="headerlink" title="改"></a>改</h2><p>这里主要讲 mv 移动指令，通过mv指令可以实现 文件移动，重命名，剪切等操作<br>命令格式：mv [-fiv] source destination<br>移动：mv file1 /home/dir  讲file1 移动到 home/dir下<br>移动并改名：mv file1 /home/dir/file2  讲file1 移动到 home/dir下并改名file2<br>重命名： mv file1 file2 当亲文件夹下转移并改名<br>mv 一些参数：<br>-f :直接移动不询问（默认）<br>-i :若目标文件已经存在，询问是否覆盖<br>-u ：如果目标文件已经存在，源文件比较新，就覆盖</p>
+<p>cp 复制命令<br>命令格式：cp [-adfilprsu] 源文件(source) 目标文件(destination)</p>
+<pre><code>cp [option] source1 source2 source3 ...  directory
+</code></pre><p>  参数说明：<br>  -a:是指archive的意思，也说是指复制所有的目录<br>  -d:若源文件为连接文件(link file)，则复制连接文件属性而非文件本身<br>  -f:强制(force)，若有重复或其它疑问时，不会询问用户，而强制复制<br>  -i:若目标文件(destination)已存在，在覆盖时会先询问是否真的操作<br>  -l:建立硬连接(hard link)的连接文件，而非复制文件本身<br>  -p:与文件的属性一起复制，而非使用默认属性<br>  -r:递归复制，用于目录的复制操作<br>  -s:复制成符号连接文件(symbolic link)，即“快捷方式”文件<br>  -u:若目标文件比源文件旧，更新目标文件<br>  如将/test1目录下的file1复制到/test3目录，并将文件名改为file2,可输入以下命令：<br>  cp /test1/file1 /test3/file2</p>
+<h2 id="查"><a href="#查" class="headerlink" title="查"></a>查</h2></li>
+<li>find<br>find /root test.txt  在/root目录下查找 test.txt</li>
+<li>grep -r<br>(1)grep ‘test’ d*　　#显示所有以d开头的文件中包含 test的行<br>(2)grep ‘test’ aa bb cc 　　 #显示在aa，bb，cc文件中包含test的行<br>(3)grep ‘[a-z]{5}’ aa 　　#显示所有包含每行字符串至少有5个连续小写字符的字符串的行<br>(4)grep magic /usr/src　　#显示/usr/src目录下的文件(不含子目录)包含magic的行<br>(5)grep -r magic /usr/src　　#显示/usr/src目录下的文件(包含子目录)包含magic的行<br>(6)grep -w pattern files ：只匹配整个单词，而不是字符串的一部分(如匹配’magic’，而不是’magical’)，</li>
+<li>which<br>which grep  查询bin文件（添加过环境变量的）</li>
+</ol>
+<h1 id="扩展（文件时间-文件类型）"><a href="#扩展（文件时间-文件类型）" class="headerlink" title="扩展（文件时间/文件类型）"></a>扩展（文件时间/文件类型）</h1>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/05/24/Linux系列学习-Linux基础与指令/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1793,410 +2195,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/04/14/最长公共子序列lcs/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="连贺扬">
-      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
-      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="拼搏岁月">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Myblog/2019/04/14/最长公共子序列lcs/" class="post-title-link" itemprop="url">最长公共子序列</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-04-14 11:41:52" itemprop="dateCreated datePublished" datetime="2019-04-14T11:41:52+08:00">2019-04-14</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-16 11:54:02" itemprop="dateModified" datetime="2019-04-16T11:54:02+08:00">2019-04-16</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/ACM算法/" itemprop="url" rel="index"><span itemprop="name">ACM算法</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <a href="/Myblog/2019/04/14/最长公共子序列lcs/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/04/14/最长公共子序列lcs/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="算法思想与实现"><a href="#算法思想与实现" class="headerlink" title="算法思想与实现"></a>算法思想与实现</h1><p>求解LCS问题，运用的是dp动态规划思想。<br>我们用Ax表示序列A的连续前x项构成的子序列，即Ax= a1,a2,……ax, By= b1,b2,……by, 我们用LCS(x, y)表示它们的最长公共子序列长度，那原问题等价于求LCS(m,n)。为了方便我们用L(x, y)表示Ax和By的一个最长公共子序列。让我们来看看如何求LCS(x, y)。我们令x表示子序列考虑最后一项</p>
-<p>（1） Ax ＝ By</p>
-<pre><code>  那么它们L(Ax, By)的最后一项一定是这个元素！
-
-为什么呢？为了方便，我们令t = Ax = By, 我们用反证法：假设L(x,y)最后一项不是t，则要么L(x,y)为空序列（别忘了这个），要么L(x,y)的最后一项是Aa＝Bb ≠ t, 且显然有a &lt; x, b &lt; y。无论是哪种情况我们都可以把t接到这个L(x,y)后面,从而得到一个更长的公共子序列。矛盾！
-如果我们从序列Ax中删掉最后一项ax得到Ax-1,从序列By中也删掉最后一项by得到By-1，(多说一句角标为0时，认为子序列是空序列)，则我们从L(x,y)也删掉最后一项t得到的序列是L(x – 1, y - 1)。为什么呢？和上面的道理相同，如果得到的序列不是L(x - 1, y - 1)，则它一定比L(x - 1, y - 1)短（注意L（，）是个集合！），那么它后面接上元素t得到的子序列L(x,y)也比L(x - 1, y - 1)接上元素t得到的子序列短，这与L(x, y)是最长公共子序列矛盾。因此L(x, y) = L(x - 1, y - 1) 最后接上元素t，LCS(Ax, By) = LCS(x - 1, y - 1) + 1。
-</code></pre><p>（2）  Ax ≠ By</p>
-<pre><code>仍然设t = L(Ax, By), 或者L(Ax, By)是空序列（这时t是未定义值不等于任何值）。则t  ≠ Ax和t  ≠ By至少有一个成立，因为t不能同时等于两个不同的值嘛！
-</code></pre><p>（2.1）如果t  ≠ Ax，则有L(x, y)= L(x - 1, y)，因为根本没Ax的事嘛。</p>
-<pre><code>LCS(x,y) = LCS(x – 1, y)
-</code></pre><p>（2.2）如果t  ≠ By,l类似L(x, y)= L(x , y - 1)</p>
-<pre><code>     LCS(x,y) = LCS(x, y – 1)
-可是，我们事先并不知道t，由定义，我们取最大的一个，因此这种情况下,有LCS(x,y) = max(LCS(x – 1, y) , LCS(x, y – 1))。看看目前我们已经得到了什么结论：
-</code></pre><p>LCS(x,y) =<br>(1) LCS(x - 1,y - 1) + 1      （Ax ＝ By）<br>(2) max(LCS(x – 1, y) , LCS(x, y – 1))    （Ax ≠ By）</p>
-<p>这时一个显然的递推式，光有递推可不行，初值是什么呢？显然，一个空序列和任何序列的最长公共子序列都是空序列！所以我们有:</p>
-<p>LCS(x,y) =<br>(1) LCS(x - 1,y - 1) + 1 如果Ax ＝ By<br>(2) max(LCS(x – 1, y) , LCS(x, y – 1)) 如果Ax ≠ By<br>(3) 0 如果x = 0或者y = 0</p>
-<p>到此我们求出了计算最长公共子序列长度的递推公式。我们实际上计算了一个(n + 1)行(m + 1)列的表格（行是0..n，列是0..m)，也就这个二维度数组LCS(,)。<br>伪代码如下：<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> x = <span class="number">0</span> to n <span class="keyword">do</span></span><br><span class="line">    <span class="keyword">for</span> y = <span class="number">0</span> to m <span class="keyword">do</span></span><br><span class="line">        <span class="keyword">if</span> (x == <span class="number">0</span> || y == <span class="number">0</span>) then </span><br><span class="line">            LCS(x, y) = <span class="number">0</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (Ax == By) then</span><br><span class="line">            LCS(x, y) =  LCS(x - <span class="number">1</span>,y - <span class="number">1</span>) + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span> </span><br><span class="line">            LCS(x, y) = ) max(LCS(x – <span class="number">1</span>, y) , LCS(x, y – <span class="number">1</span>))</span><br><span class="line">        endif</span><br><span class="line">    endfor</span><br><span class="line">endfor</span><br></pre></td></tr></table></figure></p>
-<h1 id="例题与变形"><a href="#例题与变形" class="headerlink" title="例题与变形"></a>例题与变形</h1><figure class="highlight plain"><figcaption><span>点击左侧link跳转</span><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1159" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原题连接</span><br></pre></td></tr></table></figure>
-<p>题意：单纯得模板题</p>
-<p>思路：直接套模板<br>AC代码如下：<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> <span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1000</span>;</span><br><span class="line"><span class="keyword">int</span> l[N][N];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> a,b;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=a.length();i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j =<span class="number">0</span>;j&lt;=b.length();j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i==<span class="number">0</span>||j==<span class="number">0</span>)&#123;</span><br><span class="line">                    l[i][j]=<span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(a[i<span class="number">-1</span>] == b[j<span class="number">-1</span>])&#123;</span><br><span class="line">                    l[i][j] = l[i<span class="number">-1</span>][j<span class="number">-1</span>]+<span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    l[i][j] = max(l[i<span class="number">-1</span>][j],l[i][j<span class="number">-1</span>]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;l[a.length()][b.length()]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><figcaption><span>点击左侧link跳转</span><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1503" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原题连接</span><br></pre></td></tr></table></figure><br>题意：看原题，很清楚的</p>
-<p>思路：敬请期待<br>AC代码如下：<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Myblog/2019/04/14/最长上升下降子序列/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="连贺扬">
-      <meta itemprop="description" content="岁月不饶人，我亦未曾绕过岁月">
-      <meta itemprop="image" content="/Myblog/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="拼搏岁月">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Myblog/2019/04/14/最长上升下降子序列/" class="post-title-link" itemprop="url">最长上升下降子序列</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-04-14 11:41:52" itemprop="dateCreated datePublished" datetime="2019-04-14T11:41:52+08:00">2019-04-14</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-16 11:42:45" itemprop="dateModified" datetime="2019-04-16T11:42:45+08:00">2019-04-16</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/Myblog/categories/ACM算法/" itemprop="url" rel="index"><span itemprop="name">ACM算法</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <a href="/Myblog/2019/04/14/最长上升下降子序列/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Myblog/2019/04/14/最长上升下降子序列/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="算法思想与实现"><a href="#算法思想与实现" class="headerlink" title="算法思想与实现"></a>算法思想与实现</h1><p>求解最长上升子序列有两种思想，三种方法（可能博主太菜了，只知道这三种）。</p>
-<h2 id="动态规划-（-O-n-2-）"><a href="#动态规划-（-O-n-2-）" class="headerlink" title="动态规划 （  O(n^2) ）"></a>动态规划 （  O(n^2) ）</h2><p>这里我们可以维护一个数组 f[i] 表示前i个字符，以a[i]结尾的最长子序列的长度</p>
-<p>比如求： 2 7 1 5 6 4 3 8 9 的最长上升子序列<br>f[1] = 1   : 2<br>f[2] = 2   : 2 7<br>f[3] = 1   : 1  —–因为必须以 a[i]=1 结尾<br>f[4] = 2   :2 5 or 1 5<br>f[5] = 3   :2 5 6 or 1 5 6<br>……<br>这里就形成了状态转移方程<br>for(int i=1 ;i &lt;=n; i++){<br>    for(int j =1; j&lt;i;j++){<br>        if(a[i]&gt;a[j]){<br>            f[i] = max(f[i],f[j]+1);<br>        }<br>    }<br>}<br>具体代码如下：<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N =<span class="number">1100</span>;</span><br><span class="line"><span class="keyword">int</span> a[N];<span class="comment">//输入的序列</span></span><br><span class="line"><span class="keyword">int</span> f[N];<span class="comment">//f[i] 表示 前 i 个 元素，以a[i]为结尾的最长上升子序列的长度</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;<span class="comment">//输入 n 个 元素</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;= n ;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">            f[i]=<span class="number">1</span>;<span class="comment">//f[i] 初始化为 1 因为最少，这个子序列也能是自己本身</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j =<span class="number">1</span>;j&lt;i;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(a[i]&gt;a[j])&#123;</span><br><span class="line">                    f[i] = max(f[i],f[j]+<span class="number">1</span>);<span class="comment">//核心代码，对于 a[i]前的元素，凡是a[j]&lt;a[i]的看，如今的f[i]比较大，还是a[j]+1大；</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> ans= <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            ans = max(ans,f[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<h2 id="二分-贪心（-O-n-logn-）"><a href="#二分-贪心（-O-n-logn-）" class="headerlink" title="二分+贪心（  O(n*logn)  ）"></a>二分+贪心（  O(n*logn)  ）</h2><p>整体思想：维护一个最长上升子序列B<br>遍历初始序列 A 对于每个元素 A[i] 有两种情况</p>
-<ol>
-<li>A[i] 比序列B 最后一个元素还大，直接将A[i] 加入到B序列</li>
-<li>A[i] 比序列B 最后一个元素小，则在B 序列中找出第一个比A[i]大的元素，将A[i]替换上去。（因为最后一个元素越小，后面能增加元素的可能性越大）<br>那么显然，这个维护的序列，最终并不是真的最长子序列，只是长度和最长子序列是一样的<br>代码如下：<figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N =<span class="number">1100</span>;</span><br><span class="line"><span class="keyword">int</span> a[N];<span class="comment">//初始序列</span></span><br><span class="line"><span class="keyword">int</span> f[N];<span class="comment">//维护序列</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">        <span class="built_in">memset</span>(f,<span class="number">0</span>,<span class="keyword">sizeof</span> f);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;= n ;i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">        &#125;</span><br><span class="line">        f[<span class="number">1</span>] = a[<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> len =<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i]&gt;f[len])&#123;</span><br><span class="line">                len++;</span><br><span class="line">                f[len] = a[i];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">int</span> k = upper_bound(f,f+len,a[i])-f;</span><br><span class="line">                f[k] =a[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;len&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="树状数组"><a href="#树状数组" class="headerlink" title="树状数组"></a>树状数组</h2></li>
-</ol>
-<h1 id="例题与变形"><a href="#例题与变形" class="headerlink" title="例题与变形"></a>例题与变形</h1><figure class="highlight plain"><figcaption><span>点击左侧link跳转</span><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1087" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原题连接</span><br></pre></td></tr></table></figure>
-<p>题意：题意是有N个数字构成的序列，求最大递增子段和，即递增子序列和的最大值。</p>
-<p>思路：很显然，就是 动态规划求解思想，将f[i] 定义为  前 i 个 元素，以a[i]为结尾的最长上升子序列的最大权值和<br>剩下的 就和模板差不多了<br>AC代码如下：<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">#<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"> <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"> <span class="keyword">const</span> <span class="keyword">int</span> N =<span class="number">1100</span>;</span><br><span class="line"> <span class="keyword">int</span> a[N];</span><br><span class="line"> <span class="keyword">int</span> f[N];</span><br><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> </span>&#123;</span><br><span class="line">     <span class="keyword">int</span> n;</span><br><span class="line">     <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">         <span class="keyword">if</span>(n==<span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">         <span class="built_in">memset</span>(f,<span class="number">0</span>,<span class="keyword">sizeof</span> f);</span><br><span class="line">         <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;= n ;i++)&#123;</span><br><span class="line">             <span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">             f[i]=a[i];</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">             <span class="keyword">for</span>(<span class="keyword">int</span> j =<span class="number">1</span>;j&lt;i;j++)&#123;</span><br><span class="line">                 <span class="keyword">if</span>(a[i]&gt;a[j])&#123;</span><br><span class="line">                     f[i] = max(f[i],f[j]+a[i]);</span><br><span class="line">                 &#125;</span><br><span class="line">             &#125;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">int</span> ans= <span class="number">0</span>;</span><br><span class="line">         <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">             ans = max(ans,f[i]);</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><figcaption><span>点击左侧link跳转</span><a href="http://acm.zzuli.edu.cn/problem.php?id=2518" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原题连接</span><br></pre></td></tr></table></figure>
-<p>题意：看原题，很清楚的</p>
-<p>思路：将最长上升子序列改为最长下降子序列矩阵的形式，很好想的，直接上代码<br>AC代码如下：<br><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">400</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="keyword">int</span> a[N][N];</span><br><span class="line"><span class="keyword">int</span> f[N];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=m;k++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[j][k]&lt;=a[i][k])&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span> ;i&lt;=n;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++)&#123;</span><br><span class="line">                <span class="built_in">cin</span>&gt;&gt;a[i][j];</span><br><span class="line">                f[i]=<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;i;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>( judge(i,j) )&#123;</span><br><span class="line">                    f[i] = max(f[i],f[j]+<span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> ans =<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            ans = max(ans,f[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;n-ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2246,7 +2244,7 @@
                 
                   <a href="/Myblog/archives">
                 
-                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-count">38</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
